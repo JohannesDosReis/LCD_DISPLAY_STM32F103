@@ -1,0 +1,200 @@
+.TH "Peripheral_declaration" 3 "Thu Oct 29 2020" "lcd_display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Peripheral_declaration
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM2\fP   ((\fBTIM_TypeDef\fP *)\fBTIM2_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBTIM3\fP   ((\fBTIM_TypeDef\fP *)\fBTIM3_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBRTC\fP   ((\fBRTC_TypeDef\fP *)\fBRTC_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBWWDG\fP   ((\fBWWDG_TypeDef\fP *)\fBWWDG_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBIWDG\fP   ((\fBIWDG_TypeDef\fP *)\fBIWDG_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBUSART2\fP   ((\fBUSART_TypeDef\fP *)\fBUSART2_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBI2C1\fP   ((\fBI2C_TypeDef\fP *)\fBI2C1_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBUSB\fP   ((\fBUSB_TypeDef\fP *)\fBUSB_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBCAN1\fP   ((\fBCAN_TypeDef\fP *)\fBCAN1_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBBKP\fP   ((\fBBKP_TypeDef\fP *)\fBBKP_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBPWR\fP   ((\fBPWR_TypeDef\fP *)\fBPWR_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBAFIO\fP   ((\fBAFIO_TypeDef\fP *)\fBAFIO_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBEXTI\fP   ((\fBEXTI_TypeDef\fP *)\fBEXTI_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBGPIOA\fP   ((\fBGPIO_TypeDef\fP *)\fBGPIOA_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBGPIOB\fP   ((\fBGPIO_TypeDef\fP *)\fBGPIOB_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBGPIOC\fP   ((\fBGPIO_TypeDef\fP *)\fBGPIOC_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBGPIOD\fP   ((\fBGPIO_TypeDef\fP *)\fBGPIOD_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBADC1\fP   ((\fBADC_TypeDef\fP *)\fBADC1_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBADC2\fP   ((\fBADC_TypeDef\fP *)\fBADC2_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBADC12_COMMON\fP   ((\fBADC_Common_TypeDef\fP *)\fBADC1_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBTIM1\fP   ((\fBTIM_TypeDef\fP *)\fBTIM1_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBSPI1\fP   ((\fBSPI_TypeDef\fP *)\fBSPI1_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBUSART1\fP   ((\fBUSART_TypeDef\fP *)\fBUSART1_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBDMA1\fP   ((\fBDMA_TypeDef\fP *)\fBDMA1_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBDMA1_Channel1\fP   ((\fBDMA_Channel_TypeDef\fP *)\fBDMA1_Channel1_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBDMA1_Channel2\fP   ((\fBDMA_Channel_TypeDef\fP *)\fBDMA1_Channel2_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBDMA1_Channel3\fP   ((\fBDMA_Channel_TypeDef\fP *)\fBDMA1_Channel3_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBDMA1_Channel4\fP   ((\fBDMA_Channel_TypeDef\fP *)\fBDMA1_Channel4_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBDMA1_Channel5\fP   ((\fBDMA_Channel_TypeDef\fP *)\fBDMA1_Channel5_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBDMA1_Channel6\fP   ((\fBDMA_Channel_TypeDef\fP *)\fBDMA1_Channel6_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBDMA1_Channel7\fP   ((\fBDMA_Channel_TypeDef\fP *)\fBDMA1_Channel7_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBRCC\fP   ((\fBRCC_TypeDef\fP *)\fBRCC_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBCRC\fP   ((\fBCRC_TypeDef\fP *)\fBCRC_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBFLASH\fP   ((\fBFLASH_TypeDef\fP *)\fBFLASH_R_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBOB\fP   ((\fBOB_TypeDef\fP *)\fBOB_BASE\fP)"
+.br
+.ti -1c
+.RI "#define \fBDBGMCU\fP   ((\fBDBGMCU_TypeDef\fP *)\fBDBGMCU_BASE\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ADC1   ((\fBADC_TypeDef\fP *)\fBADC1_BASE\fP)"
+
+.SS "#define ADC12_COMMON   ((\fBADC_Common_TypeDef\fP *)\fBADC1_BASE\fP)"
+
+.SS "#define ADC2   ((\fBADC_TypeDef\fP *)\fBADC2_BASE\fP)"
+
+.SS "#define AFIO   ((\fBAFIO_TypeDef\fP *)\fBAFIO_BASE\fP)"
+
+.SS "#define BKP   ((\fBBKP_TypeDef\fP *)\fBBKP_BASE\fP)"
+
+.SS "#define CAN1   ((\fBCAN_TypeDef\fP *)\fBCAN1_BASE\fP)"
+
+.SS "#define CRC   ((\fBCRC_TypeDef\fP *)\fBCRC_BASE\fP)"
+
+.SS "#define DBGMCU   ((\fBDBGMCU_TypeDef\fP *)\fBDBGMCU_BASE\fP)"
+
+.SS "#define DMA1   ((\fBDMA_TypeDef\fP *)\fBDMA1_BASE\fP)"
+
+.SS "#define DMA1_Channel1   ((\fBDMA_Channel_TypeDef\fP *)\fBDMA1_Channel1_BASE\fP)"
+
+.SS "#define DMA1_Channel2   ((\fBDMA_Channel_TypeDef\fP *)\fBDMA1_Channel2_BASE\fP)"
+
+.SS "#define DMA1_Channel3   ((\fBDMA_Channel_TypeDef\fP *)\fBDMA1_Channel3_BASE\fP)"
+
+.SS "#define DMA1_Channel4   ((\fBDMA_Channel_TypeDef\fP *)\fBDMA1_Channel4_BASE\fP)"
+
+.SS "#define DMA1_Channel5   ((\fBDMA_Channel_TypeDef\fP *)\fBDMA1_Channel5_BASE\fP)"
+
+.SS "#define DMA1_Channel6   ((\fBDMA_Channel_TypeDef\fP *)\fBDMA1_Channel6_BASE\fP)"
+
+.SS "#define DMA1_Channel7   ((\fBDMA_Channel_TypeDef\fP *)\fBDMA1_Channel7_BASE\fP)"
+
+.SS "#define EXTI   ((\fBEXTI_TypeDef\fP *)\fBEXTI_BASE\fP)"
+
+.SS "#define FLASH   ((\fBFLASH_TypeDef\fP *)\fBFLASH_R_BASE\fP)"
+
+.SS "#define GPIOA   ((\fBGPIO_TypeDef\fP *)\fBGPIOA_BASE\fP)"
+
+.SS "#define GPIOB   ((\fBGPIO_TypeDef\fP *)\fBGPIOB_BASE\fP)"
+
+.SS "#define GPIOC   ((\fBGPIO_TypeDef\fP *)\fBGPIOC_BASE\fP)"
+
+.SS "#define GPIOD   ((\fBGPIO_TypeDef\fP *)\fBGPIOD_BASE\fP)"
+
+.SS "#define I2C1   ((\fBI2C_TypeDef\fP *)\fBI2C1_BASE\fP)"
+
+.SS "#define IWDG   ((\fBIWDG_TypeDef\fP *)\fBIWDG_BASE\fP)"
+
+.SS "#define OB   ((\fBOB_TypeDef\fP *)\fBOB_BASE\fP)"
+
+.SS "#define PWR   ((\fBPWR_TypeDef\fP *)\fBPWR_BASE\fP)"
+
+.SS "#define RCC   ((\fBRCC_TypeDef\fP *)\fBRCC_BASE\fP)"
+
+.SS "#define RTC   ((\fBRTC_TypeDef\fP *)\fBRTC_BASE\fP)"
+
+.SS "#define SPI1   ((\fBSPI_TypeDef\fP *)\fBSPI1_BASE\fP)"
+
+.SS "#define TIM1   ((\fBTIM_TypeDef\fP *)\fBTIM1_BASE\fP)"
+
+.SS "#define TIM2   ((\fBTIM_TypeDef\fP *)\fBTIM2_BASE\fP)"
+
+.SS "#define TIM3   ((\fBTIM_TypeDef\fP *)\fBTIM3_BASE\fP)"
+
+.SS "#define USART1   ((\fBUSART_TypeDef\fP *)\fBUSART1_BASE\fP)"
+
+.SS "#define USART2   ((\fBUSART_TypeDef\fP *)\fBUSART2_BASE\fP)"
+
+.SS "#define USB   ((\fBUSB_TypeDef\fP *)\fBUSB_BASE\fP)"
+
+.SS "#define WWDG   ((\fBWWDG_TypeDef\fP *)\fBWWDG_BASE\fP)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for lcd_display from the source code\&.

@@ -1,0 +1,70 @@
+.TH "RCC_AHB_Peripheral_Clock_Enable_Disable_Status" 3 "Thu Oct 29 2020" "lcd_display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_AHB_Peripheral_Clock_Enable_Disable_Status \- Get the enable or disable status of the AHB peripheral clock\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA1_IS_CLK_ENABLED\fP()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_DMA1EN\fP)) != \fBRESET\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA1_IS_CLK_DISABLED\fP()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_DMA1EN\fP)) == \fBRESET\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SRAM_IS_CLK_ENABLED\fP()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_SRAMEN\fP)) != \fBRESET\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SRAM_IS_CLK_DISABLED\fP()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_SRAMEN\fP)) == \fBRESET\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_FLITF_IS_CLK_ENABLED\fP()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_FLITFEN\fP)) != \fBRESET\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_FLITF_IS_CLK_DISABLED\fP()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_FLITFEN\fP)) == \fBRESET\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_CRC_IS_CLK_ENABLED\fP()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_CRCEN\fP)) != \fBRESET\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_CRC_IS_CLK_DISABLED\fP()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_CRCEN\fP)) == \fBRESET\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Get the enable or disable status of the AHB peripheral clock\&. 
+
+
+.PP
+\fBNote\fP
+.RS 4
+After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it\&. 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_RCC_CRC_IS_CLK_DISABLED()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_CRCEN\fP)) == \fBRESET\fP)"
+
+.SS "#define __HAL_RCC_CRC_IS_CLK_ENABLED()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_CRCEN\fP)) != \fBRESET\fP)"
+
+.SS "#define __HAL_RCC_DMA1_IS_CLK_DISABLED()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_DMA1EN\fP)) == \fBRESET\fP)"
+
+.SS "#define __HAL_RCC_DMA1_IS_CLK_ENABLED()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_DMA1EN\fP)) != \fBRESET\fP)"
+
+.SS "#define __HAL_RCC_FLITF_IS_CLK_DISABLED()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_FLITFEN\fP)) == \fBRESET\fP)"
+
+.SS "#define __HAL_RCC_FLITF_IS_CLK_ENABLED()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_FLITFEN\fP)) != \fBRESET\fP)"
+
+.SS "#define __HAL_RCC_SRAM_IS_CLK_DISABLED()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_SRAMEN\fP)) == \fBRESET\fP)"
+
+.SS "#define __HAL_RCC_SRAM_IS_CLK_ENABLED()   ((\fBRCC\fP\->AHBENR & (\fBRCC_AHBENR_SRAMEN\fP)) != \fBRESET\fP)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for lcd_display from the source code\&.

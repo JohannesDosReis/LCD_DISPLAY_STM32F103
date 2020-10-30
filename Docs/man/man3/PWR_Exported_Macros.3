@@ -1,0 +1,270 @@
+.TH "PWR_Exported_Macros" 3 "Thu Oct 29 2020" "lcd_display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PWR_Exported_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_PWR_GET_FLAG\fP(__FLAG__)   ((\fBPWR\fP\->CSR & (__FLAG__)) == (__FLAG__))"
+.br
+.RI "Check PWR flag is set or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_CLEAR_FLAG\fP(__FLAG__)   \fBSET_BIT\fP(\fBPWR\fP\->CR, ((__FLAG__) << 2))"
+.br
+.RI "Clear the PWR's pending flags\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_ENABLE_IT\fP()   \fBSET_BIT\fP(\fBEXTI\fP\->IMR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "Enable interrupt on PVD Exti Line 16\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_DISABLE_IT\fP()   \fBCLEAR_BIT\fP(\fBEXTI\fP\->IMR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "Disable interrupt on PVD Exti Line 16\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_ENABLE_EVENT\fP()   \fBSET_BIT\fP(\fBEXTI\fP\->EMR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "Enable event on PVD Exti Line 16\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_DISABLE_EVENT\fP()   \fBCLEAR_BIT\fP(\fBEXTI\fP\->EMR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "Disable event on PVD Exti Line 16\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE\fP()   \fBSET_BIT\fP(\fBEXTI\fP\->FTSR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "PVD EXTI line configuration: set falling edge trigger\&. 
+.br
+ "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE\fP()   \fBCLEAR_BIT\fP(\fBEXTI\fP\->FTSR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "Disable the PVD Extended Interrupt Falling Trigger\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE\fP()   \fBSET_BIT\fP(\fBEXTI\fP\->RTSR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "PVD EXTI line configuration: set rising edge trigger\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE\fP()   \fBCLEAR_BIT\fP(\fBEXTI\fP\->RTSR, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "Disable the PVD Extended Interrupt Rising Trigger\&. This parameter can be: "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_ENABLE_RISING_FALLING_EDGE\fP()   \fB__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE\fP();\fB__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE\fP();"
+.br
+.RI "PVD EXTI line configuration: set rising & falling edge trigger\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_DISABLE_RISING_FALLING_EDGE\fP()   \fB__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE\fP();\fB__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE\fP();"
+.br
+.RI "Disable the PVD Extended Interrupt Rising & Falling Trigger\&. This parameter can be: "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_GET_FLAG\fP()   (\fBEXTI\fP\->PR & (\fBPWR_EXTI_LINE_PVD\fP))"
+.br
+.RI "Check whether the specified PVD EXTI interrupt flag is set or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_CLEAR_FLAG\fP()   (\fBEXTI\fP\->PR = (\fBPWR_EXTI_LINE_PVD\fP))"
+.br
+.RI "Clear the PVD EXTI flag\&. "
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_GENERATE_SWIT\fP()   \fBSET_BIT\fP(\fBEXTI\fP\->SWIER, \fBPWR_EXTI_LINE_PVD\fP)"
+.br
+.RI "Generate a Software interrupt on selected EXTI line\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_PWR_CLEAR_FLAG(__FLAG__)   \fBSET_BIT\fP(\fBPWR\fP\->CR, ((__FLAG__) << 2))"
+
+.PP
+Clear the PWR's pending flags\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>FLAG</strong>\fP specifies the flag to clear\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+PWR_FLAG_WU: Wake Up flag 
+.IP "\(bu" 2
+PWR_FLAG_SB: StandBy flag 
+.PP
+.RE
+.PP
+
+.SS "#define __HAL_PWR_GET_FLAG(__FLAG__)   ((\fBPWR\fP\->CSR & (__FLAG__)) == (__FLAG__))"
+
+.PP
+Check PWR flag is set or not\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI<strong>FLAG</strong>\fP specifies the flag to check\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+PWR_FLAG_WU: Wake Up flag\&. This flag indicates that a wakeup event was received from the WKUP pin or from the RTC alarm An additional wakeup event is detected if the WKUP pin is enabled (by setting the EWUP bit) when the WKUP pin level is already high\&. 
+.IP "\(bu" 2
+PWR_FLAG_SB: StandBy flag\&. This flag indicates that the system was resumed from StandBy mode\&. 
+.IP "\(bu" 2
+PWR_FLAG_PVDO: PVD Output\&. This flag is valid only if PVD is enabled by the \fBHAL_PWR_EnablePVD()\fP function\&. The PVD is stopped by Standby mode For this reason, this bit is equal to 0 after Standby or reset until the PVDE bit is set\&. 
+.PP
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fIThe\fP new state of \fBFLAG\fP (TRUE or FALSE)\&. 
+.RE
+.PP
+
+.SS "#define __HAL_PWR_PVD_EXTI_CLEAR_FLAG()   (\fBEXTI\fP\->PR = (\fBPWR_EXTI_LINE_PVD\fP))"
+
+.PP
+Clear the PVD EXTI flag\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "#define __HAL_PWR_PVD_EXTI_DISABLE_EVENT()   \fBCLEAR_BIT\fP(\fBEXTI\fP\->EMR, \fBPWR_EXTI_LINE_PVD\fP)"
+
+.PP
+Disable event on PVD Exti Line 16\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "#define __HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE()   \fBCLEAR_BIT\fP(\fBEXTI\fP\->FTSR, \fBPWR_EXTI_LINE_PVD\fP)"
+
+.PP
+Disable the PVD Extended Interrupt Falling Trigger\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "#define __HAL_PWR_PVD_EXTI_DISABLE_IT()   \fBCLEAR_BIT\fP(\fBEXTI\fP\->IMR, \fBPWR_EXTI_LINE_PVD\fP)"
+
+.PP
+Disable interrupt on PVD Exti Line 16\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "#define __HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE()   \fBCLEAR_BIT\fP(\fBEXTI\fP\->RTSR, \fBPWR_EXTI_LINE_PVD\fP)"
+
+.PP
+Disable the PVD Extended Interrupt Rising Trigger\&. This parameter can be: 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "#define __HAL_PWR_PVD_EXTI_DISABLE_RISING_FALLING_EDGE()   \fB__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE\fP();\fB__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE\fP();"
+
+.PP
+Disable the PVD Extended Interrupt Rising & Falling Trigger\&. This parameter can be: 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "#define __HAL_PWR_PVD_EXTI_ENABLE_EVENT()   \fBSET_BIT\fP(\fBEXTI\fP\->EMR, \fBPWR_EXTI_LINE_PVD\fP)"
+
+.PP
+Enable event on PVD Exti Line 16\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "#define __HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE()   \fBSET_BIT\fP(\fBEXTI\fP\->FTSR, \fBPWR_EXTI_LINE_PVD\fP)"
+
+.PP
+PVD EXTI line configuration: set falling edge trigger\&. 
+.br
+ 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "#define __HAL_PWR_PVD_EXTI_ENABLE_IT()   \fBSET_BIT\fP(\fBEXTI\fP\->IMR, \fBPWR_EXTI_LINE_PVD\fP)"
+
+.PP
+Enable interrupt on PVD Exti Line 16\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "#define __HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE()   \fBSET_BIT\fP(\fBEXTI\fP\->RTSR, \fBPWR_EXTI_LINE_PVD\fP)"
+
+.PP
+PVD EXTI line configuration: set rising edge trigger\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "#define __HAL_PWR_PVD_EXTI_ENABLE_RISING_FALLING_EDGE()   \fB__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE\fP();\fB__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE\fP();"
+
+.PP
+PVD EXTI line configuration: set rising & falling edge trigger\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "#define __HAL_PWR_PVD_EXTI_GENERATE_SWIT()   \fBSET_BIT\fP(\fBEXTI\fP\->SWIER, \fBPWR_EXTI_LINE_PVD\fP)"
+
+.PP
+Generate a Software interrupt on selected EXTI line\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.SS "#define __HAL_PWR_PVD_EXTI_GET_FLAG()   (\fBEXTI\fP\->PR & (\fBPWR_EXTI_LINE_PVD\fP))"
+
+.PP
+Check whether the specified PVD EXTI interrupt flag is set or not\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fIEXTI\fP PVD Line Status\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for lcd_display from the source code\&.

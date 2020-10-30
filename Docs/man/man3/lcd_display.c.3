@@ -1,0 +1,215 @@
+.TH "Core/Src/lcd_display.c" 3 "Thu Oct 29 2020" "lcd_display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Core/Src/lcd_display.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'lcd_display\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBlcd_time\fP ()"
+.br
+.RI "Tempo para dar o pulso\&. "
+.ti -1c
+.RI "void \fBlcd_init\fP ()"
+.br
+.RI "Initialize of the LCD display Initialize in 4-bit mode, cursor off, shift cursor to right and clear the LCD screen\&. "
+.ti -1c
+.RI "void \fBlcd_clear\fP ()"
+.br
+.RI "Clear the LCD screen\&. "
+.ti -1c
+.RI "void \fBlcd_cmd\fP (char cmd)"
+.br
+.RI "Send a command to the LCD\&. "
+.ti -1c
+.RI "void \fBlcd_char\fP (char data)"
+.br
+.RI "Send data to LCD\&. "
+.ti -1c
+.RI "void \fBlcd_string\fP (const char *msg)"
+.br
+.RI "Send a string of data to the LCD\&. "
+.ti -1c
+.RI "void \fBlcd_string_pos\fP (char pos, const char *msg)"
+.br
+.RI "Send a string of data to the LCD on a specified position\&. "
+.ti -1c
+.RI "void \fBlcd_custom_char\fP (unsigned char loc, unsigned char *msg)"
+.br
+.RI "Set a custom character on the LCD\&. "
+.ti -1c
+.RI "void \fBlcd_default_custom_char\fP ()"
+.br
+.RI "Load the default custom characters\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "unsigned char \fBcharacter1\fP [8] = {0x02, 0x04, 0x0E, 0x01, 0x0F, 0x11, 0x0F, 0x00}"
+.br
+.ti -1c
+.RI "unsigned char \fBcharacter2\fP [8] = {0x02, 0x04, 0x0E, 0x11, 0x1F, 0x10, 0x0E, 0x00}"
+.br
+.ti -1c
+.RI "unsigned char \fBcharacter3\fP [8] = {0x00, 0x0F, 0x10, 0x10, 0x0F, 0x02, 0x0E, 0x00}"
+.br
+.ti -1c
+.RI "unsigned char \fBcharacter4\fP [8] = {0x0D, 0x12, 0x06, 0x01, 0x0F, 0x11, 0x0F, 0x00}"
+.br
+.ti -1c
+.RI "unsigned char \fBcharacter5\fP [8] = {0x0D, 0x12, 0x00, 0x0E, 0x11, 0x11, 0x0E, 0x00}"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void lcd_char (char data)"
+
+.PP
+Send data to LCD\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP The data to be sent to the LCD 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_clear ()"
+
+.PP
+Clear the LCD screen\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_cmd (char cmd)"
+
+.PP
+Send a command to the LCD\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcmd\fP The command to be sent to the LCD 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_custom_char (unsigned char loc, unsigned char * msg)"
+
+.PP
+Set a custom character on the LCD\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIloc\fP The location of the character should be set [0 - 8] 
+.br
+\fImsg\fP The character to set 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_default_custom_char ()"
+
+.PP
+Load the default custom characters\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_init ()"
+
+.PP
+Initialize of the LCD display Initialize in 4-bit mode, cursor off, shift cursor to right and clear the LCD screen\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_string (const char * msg)"
+
+.PP
+Send a string of data to the LCD\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImsg\fP The string to be sent to the LCD 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_string_pos (char pos, const char * msg)"
+
+.PP
+Send a string of data to the LCD on a specified position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP The position on the LCD where the string should be displayed 
+.br
+\fImsg\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_time ()"
+
+.PP
+Tempo para dar o pulso\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "unsigned char character1[8] = {0x02, 0x04, 0x0E, 0x01, 0x0F, 0x11, 0x0F, 0x00}"
+
+.SS "unsigned char character2[8] = {0x02, 0x04, 0x0E, 0x11, 0x1F, 0x10, 0x0E, 0x00}"
+
+.SS "unsigned char character3[8] = {0x00, 0x0F, 0x10, 0x10, 0x0F, 0x02, 0x0E, 0x00}"
+
+.SS "unsigned char character4[8] = {0x0D, 0x12, 0x06, 0x01, 0x0F, 0x11, 0x0F, 0x00}"
+
+.SS "unsigned char character5[8] = {0x0D, 0x12, 0x00, 0x0E, 0x11, 0x11, 0x0E, 0x00}"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for lcd_display from the source code\&.

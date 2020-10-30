@@ -1,0 +1,1832 @@
+.TH "CMSIS_Core_SysTickFunctions" 3 "Thu Oct 29 2020" "lcd_display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CMSIS_Core_SysTickFunctions \- Functions that configure the System\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Modules"
+
+.in +1c
+.ti -1c
+.RI "\fBITM Functions\fP"
+.br
+.RI "Functions that access the ITM debug interface\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::_reserved0\fP:28"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::_reserved0\fP:28"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "} \fBAPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::w\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBIPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fBIPSR_Type::_reserved0\fP:23"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBIPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fBIPSR_Type::_reserved0\fP:23"
+.br
+.ti -1c
+.RI "} \fBIPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBIPSR_Type::w\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::_reserved0\fP:15"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::T\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::_reserved1\fP:3"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::_reserved0\fP:15"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::T\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::_reserved1\fP:3"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "} \fBxPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::w\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::nPRIV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::SPSEL\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::_reserved1\fP:30"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::nPRIV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::SPSEL\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::_reserved1\fP:30"
+.br
+.ti -1c
+.RI "} \fBCONTROL_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::w\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBNVIC_Type::ISER\fP [16U]"
+.br
+.ti -1c
+.RI "uint32_t \fBNVIC_Type::RESERVED0\fP [16U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBNVIC_Type::ICER\fP [16U]"
+.br
+.ti -1c
+.RI "uint32_t \fBNVIC_Type::RSERVED1\fP [16U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBNVIC_Type::ISPR\fP [16U]"
+.br
+.ti -1c
+.RI "uint32_t \fBNVIC_Type::RESERVED2\fP [16U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBNVIC_Type::ICPR\fP [16U]"
+.br
+.ti -1c
+.RI "uint32_t \fBNVIC_Type::RESERVED3\fP [16U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBNVIC_Type::IABR\fP [16U]"
+.br
+.ti -1c
+.RI "uint32_t \fBNVIC_Type::RESERVED4\fP [16U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBNVIC_Type::ITNS\fP [16U]"
+.br
+.ti -1c
+.RI "uint32_t \fBNVIC_Type::RESERVED5\fP [16U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBNVIC_Type::IPR\fP [124U]"
+.br
+.ti -1c
+.RI "\fB__IM\fP uint32_t \fBSCB_Type::CPUID\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBSCB_Type::ICSR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBSCB_Type::RESERVED0\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBSCB_Type::AIRCR\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBSCB_Type::SCR\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBSCB_Type::CCR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBSCB_Type::RESERVED1\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBSCB_Type::SHPR\fP [2U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBSCB_Type::SHCSR\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBSysTick_Type::CTRL\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBSysTick_Type::LOAD\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBSysTick_Type::VAL\fP"
+.br
+.ti -1c
+.RI "\fB__IM\fP uint32_t \fBSysTick_Type::CALIB\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::CTRL\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED0\fP [6U]"
+.br
+.ti -1c
+.RI "\fB__IM\fP uint32_t \fBDWT_Type::PCSR\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP0\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED1\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION0\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED2\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP1\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED3\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION1\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED4\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP2\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED5\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION2\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED6\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP3\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED7\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION3\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED8\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP4\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED9\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION4\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED10\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP5\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED11\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION5\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED12\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP6\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED13\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION6\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED14\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP7\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED15\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION7\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED16\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP8\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED17\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION8\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED18\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP9\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED19\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION9\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED20\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP10\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED21\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION10\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED22\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP11\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED23\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION11\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED24\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP12\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED25\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION12\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED26\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP13\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED27\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION13\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED28\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP14\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED29\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION14\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED30\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::COMP15\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDWT_Type::RESERVED31\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBDWT_Type::FUNCTION15\fP"
+.br
+.ti -1c
+.RI "\fB__IM\fP uint32_t \fBTPI_Type::SSPSR\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBTPI_Type::CSPSR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBTPI_Type::RESERVED0\fP [2U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBTPI_Type::ACPR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBTPI_Type::RESERVED1\fP [55U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBTPI_Type::SPPR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBTPI_Type::RESERVED2\fP [131U]"
+.br
+.ti -1c
+.RI "\fB__IM\fP uint32_t \fBTPI_Type::FFSR\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBTPI_Type::FFCR\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBTPI_Type::PSCR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBTPI_Type::RESERVED3\fP [809U]"
+.br
+.ti -1c
+.RI "\fB__OM\fP uint32_t \fBTPI_Type::LAR\fP"
+.br
+.ti -1c
+.RI "\fB__IM\fP uint32_t \fBTPI_Type::LSR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBTPI_Type::RESERVED4\fP [4U]"
+.br
+.ti -1c
+.RI "\fB__IM\fP uint32_t \fBTPI_Type::TYPE\fP"
+.br
+.ti -1c
+.RI "\fB__IM\fP uint32_t \fBTPI_Type::DEVTYPE\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBCoreDebug_Type::DHCSR\fP"
+.br
+.ti -1c
+.RI "\fB__OM\fP uint32_t \fBCoreDebug_Type::DCRSR\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBCoreDebug_Type::DCRDR\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBCoreDebug_Type::DEMCR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBCoreDebug_Type::RESERVED4\fP [1U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBCoreDebug_Type::DAUTHCTRL\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBCoreDebug_Type::DSCSR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::_reserved0\fP:28"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::_reserved0\fP:28"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "} \fBAPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBIPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fBIPSR_Type::_reserved0\fP:23"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBIPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fBIPSR_Type::_reserved0\fP:23"
+.br
+.ti -1c
+.RI "} \fBIPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::_reserved0\fP:15"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::T\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::_reserved1\fP:3"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::_reserved0\fP:15"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::T\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::_reserved1\fP:3"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "} \fBxPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::_reserved0\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::SPSEL\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::_reserved1\fP:30"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::_reserved0\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::SPSEL\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::_reserved1\fP:30"
+.br
+.ti -1c
+.RI "} \fBCONTROL_Type::b\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBNVIC_Type::IP\fP [8U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBSCB_Type::SHP\fP [2U]"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::_reserved0\fP:28"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::_reserved0\fP:28"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "} \fBAPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBIPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fBIPSR_Type::_reserved0\fP:23"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBIPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fBIPSR_Type::_reserved0\fP:23"
+.br
+.ti -1c
+.RI "} \fBIPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::_reserved0\fP:15"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::T\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::_reserved1\fP:3"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::_reserved0\fP:15"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::T\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::_reserved1\fP:3"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "} \fBxPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::nPRIV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::SPSEL\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::_reserved1\fP:30"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::nPRIV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::SPSEL\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::_reserved1\fP:30"
+.br
+.ti -1c
+.RI "} \fBCONTROL_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::_reserved0\fP:28"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::_reserved0\fP:28"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "} \fBAPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBIPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fBIPSR_Type::_reserved0\fP:23"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBIPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fBIPSR_Type::_reserved0\fP:23"
+.br
+.ti -1c
+.RI "} \fBIPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::_reserved0\fP:15"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::T\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::_reserved1\fP:3"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::_reserved0\fP:15"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::T\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::_reserved1\fP:3"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "} \fBxPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::_reserved0\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::SPSEL\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::_reserved1\fP:30"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::_reserved0\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::SPSEL\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::_reserved1\fP:30"
+.br
+.ti -1c
+.RI "} \fBCONTROL_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::_reserved0\fP:28"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::_reserved0\fP:28"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "} \fBAPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBIPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fBIPSR_Type::_reserved0\fP:23"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBIPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fBIPSR_Type::_reserved0\fP:23"
+.br
+.ti -1c
+.RI "} \fBIPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::_reserved0\fP:15"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::T\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::_reserved1\fP:3"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::_reserved0\fP:15"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::T\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::_reserved1\fP:3"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "} \fBxPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::nPRIV\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::SPSEL\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::_reserved1\fP:30"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::nPRIV\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::SPSEL\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::_reserved1\fP:30"
+.br
+.ti -1c
+.RI "} \fBCONTROL_Type::b\fP"
+.br
+.ti -1c
+.RI "\fB__IM\fP uint32_t \fBTPI_Type::TRIGGER\fP"
+.br
+.ti -1c
+.RI "\fB__IM\fP uint32_t \fBTPI_Type::ITFTTD0\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBTPI_Type::ITATBCTR2\fP"
+.br
+.ti -1c
+.RI "\fB__IM\fP uint32_t \fBTPI_Type::ITATBCTR0\fP"
+.br
+.ti -1c
+.RI "\fB__IM\fP uint32_t \fBTPI_Type::ITFTTD1\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBTPI_Type::ITCTRL\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBTPI_Type::RESERVED5\fP [39U]"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBTPI_Type::CLAIMSET\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBTPI_Type::CLAIMCLR\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBTPI_Type::RESERVED7\fP [8U]"
+.br
+.ti -1c
+.RI "\fB__IM\fP uint32_t \fBTPI_Type::DEVID\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::_reserved0\fP:28"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBAPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::_reserved0\fP:28"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBAPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "} \fBAPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBIPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fBIPSR_Type::_reserved0\fP:23"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBIPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fBIPSR_Type::_reserved0\fP:23"
+.br
+.ti -1c
+.RI "} \fBIPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::_reserved0\fP:15"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::T\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::_reserved1\fP:3"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBxPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::ISR\fP:9"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::_reserved0\fP:15"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::T\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::_reserved1\fP:3"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::V\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::C\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::Z\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBxPSR_Type::N\fP:1"
+.br
+.ti -1c
+.RI "} \fBxPSR_Type::b\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::_reserved0\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::SPSEL\fP:1"
+.br
+.ti -1c
+.RI "uint32_t \fBCONTROL_Type::_reserved1\fP:30"
+.br
+.ti -1c
+.RI "struct {"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::_reserved0\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::SPSEL\fP:1"
+.br
+.ti -1c
+.RI "   uint32_t \fBCONTROL_Type::_reserved1\fP:30"
+.br
+.ti -1c
+.RI "} \fBCONTROL_Type::b\fP"
+.br
+.ti -1c
+.RI "\fB__IOM\fP uint32_t \fBSCB_Type::SFCR\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Functions that configure the System\&. 
+
+
+.SH "Variable Documentation"
+.PP 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 0\&.\&.27 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 0\&.\&.27 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 0\&.\&.27 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 0\&.\&.27 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 9\&.\&.31 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 9\&.\&.31 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 0\&.\&.27 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 0\&.\&.27 Reserved 
+.SS "uint32_t APSR_Type::_reserved0"
+bit: 0\&.\&.27 Reserved
+.PP
+bit: 0\&.\&.15 Reserved
+.PP
+bit: 0\&.\&.26 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 9\&.\&.31 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 9\&.\&.31 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 9\&.\&.23 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 9\&.\&.23 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 9\&.\&.23 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 9\&.\&.23 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 9\&.\&.31 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 9\&.\&.31 Reserved 
+.SS "uint32_t IPSR_Type::_reserved0"
+bit: 9\&.\&.31 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 9\&.\&.23 Reserved 
+.SS "uint32_t xPSR_Type::_reserved0"
+bit: 9\&.\&.23 Reserved
+.PP
+bit: 9\&.\&.15 Reserved
+.PP
+bit: 9 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 9\&.\&.23 Reserved 
+.SS "uint32_t CONTROL_Type::_reserved0"
+bit: 0 Reserved
+.PP
+bit: 3\&.\&.31 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 0 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 0 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved0"
+bit: 0 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved1"
+bit: 25\&.\&.27 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved1"
+bit: 25\&.\&.27 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved1"
+bit: 25\&.\&.27 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved1"
+bit: 25\&.\&.27 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved1"
+bit: 25\&.\&.27 Reserved 
+.SS "uint32_t xPSR_Type::_reserved1"
+bit: 25\&.\&.27 Reserved
+.PP
+bit: 20\&.\&.23 Reserved
+.PP
+bit: 16\&.\&.23 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved1"
+bit: 25\&.\&.27 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved1"
+bit: 2\&.\&.31 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved1"
+bit: 2\&.\&.31 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved1"
+bit: 2\&.\&.31 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved1"
+bit: 2\&.\&.31 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved1"
+bit: 2\&.\&.31 Reserved 
+.SS "uint32_t CONTROL_Type::_reserved1"
+bit: 2\&.\&.31 Reserved
+.PP
+bit: 4\&.\&.31 Reserved 
+.SS "uint32_t { \&.\&.\&. } ::_reserved1"
+bit: 2\&.\&.31 Reserved 
+.SS "\fB__IOM\fP uint32_t TPI_Type::ACPR"
+Offset: 0x010 (R/W) Asynchronous Clock Prescaler Register 
+.SS "\fB__IOM\fP uint32_t SCB_Type::AIRCR"
+Offset: 0x00C (R/W) Application Interrupt and Reset Control Register 
+.SS "struct { \&.\&.\&. }   APSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   APSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   APSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   APSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   IPSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   IPSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   IPSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   APSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   APSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   IPSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   xPSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   xPSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   xPSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   IPSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   IPSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   xPSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   CONTROL_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   CONTROL_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   xPSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   xPSR_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   CONTROL_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   CONTROL_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   CONTROL_Type::b"
+Structure used for bit access 
+.SS "struct { \&.\&.\&. }   CONTROL_Type::b"
+Structure used for bit access 
+.SS "uint32_t { \&.\&.\&. } ::C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t APSR_Type::C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t xPSR_Type::C"
+bit: 29 Carry condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::C"
+bit: 29 Carry condition code flag 
+.SS "\fB__IM\fP uint32_t SysTick_Type::CALIB"
+Offset: 0x00C (R/ ) SysTick Calibration Register 
+.SS "\fB__IOM\fP uint32_t SCB_Type::CCR"
+Offset: 0x014 (R/W) Configuration Control Register 
+.SS "\fB__IOM\fP uint32_t TPI_Type::CLAIMCLR"
+Offset: 0xFA4 (R/W) Claim tag clear 
+.SS "\fB__IOM\fP uint32_t TPI_Type::CLAIMSET"
+Offset: 0xFA0 (R/W) Claim tag set 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP0"
+Offset: 0x020 (R/W) Comparator Register 0 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP1"
+Offset: 0x030 (R/W) Comparator Register 1 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP10"
+Offset: 0x0C0 (R/W) Comparator Register 10 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP11"
+Offset: 0x0D0 (R/W) Comparator Register 11 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP12"
+Offset: 0x0E0 (R/W) Comparator Register 12 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP13"
+Offset: 0x0F0 (R/W) Comparator Register 13 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP14"
+Offset: 0x100 (R/W) Comparator Register 14 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP15"
+Offset: 0x110 (R/W) Comparator Register 15 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP2"
+Offset: 0x040 (R/W) Comparator Register 2 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP3"
+Offset: 0x050 (R/W) Comparator Register 3 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP4"
+Offset: 0x060 (R/W) Comparator Register 4 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP5"
+Offset: 0x070 (R/W) Comparator Register 5 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP6"
+Offset: 0x080 (R/W) Comparator Register 6 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP7"
+Offset: 0x090 (R/W) Comparator Register 7 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP8"
+Offset: 0x0A0 (R/W) Comparator Register 8 
+.SS "\fB__IOM\fP uint32_t DWT_Type::COMP9"
+Offset: 0x0B0 (R/W) Comparator Register 9 
+.SS "\fB__IM\fP uint32_t SCB_Type::CPUID"
+Offset: 0x000 (R/ ) CPUID Base Register 
+.SS "\fB__IOM\fP uint32_t TPI_Type::CSPSR"
+Offset: 0x004 (R/W) Current Parallel Port Sizes Register
+.PP
+Offset: 0x004 (R/W) Current Parallel Port Size Register 
+.SS "\fB__IOM\fP uint32_t SysTick_Type::CTRL"
+Offset: 0x000 (R/W) SysTick Control and Status Register 
+.SS "\fB__IOM\fP uint32_t DWT_Type::CTRL"
+Offset: 0x000 (R/W) Control Register 
+.SS "\fB__IOM\fP uint32_t CoreDebug_Type::DAUTHCTRL"
+Offset: 0x014 (R/W) Debug Authentication Control Register 
+.SS "\fB__IOM\fP uint32_t CoreDebug_Type::DCRDR"
+Offset: 0x008 (R/W) Debug Core Register Data Register 
+.SS "\fB__OM\fP uint32_t CoreDebug_Type::DCRSR"
+Offset: 0x004 ( /W) Debug Core Register Selector Register 
+.SS "\fB__IOM\fP uint32_t CoreDebug_Type::DEMCR"
+Offset: 0x00C (R/W) Debug Exception and Monitor Control Register 
+.SS "\fB__IM\fP uint32_t TPI_Type::DEVID"
+Offset: 0xFC8 (R/ ) Device Configuration Register
+.PP
+Offset: 0xFC8 (R/ ) TPIU_DEVID 
+.SS "\fB__IM\fP uint32_t TPI_Type::DEVTYPE"
+Offset: 0xFCC (R/ ) Device Type Register
+.PP
+Offset: 0xFCC (R/ ) Device Type Identifier Register
+.PP
+Offset: 0xFCC (R/ ) TPIU_DEVTYPE 
+.SS "\fB__IOM\fP uint32_t CoreDebug_Type::DHCSR"
+Offset: 0x000 (R/W) Debug Halting Control and Status Register 
+.SS "\fB__IOM\fP uint32_t CoreDebug_Type::DSCSR"
+Offset: 0x018 (R/W) Debug Security Control and Status Register 
+.SS "\fB__IOM\fP uint32_t TPI_Type::FFCR"
+Offset: 0x304 (R/W) Formatter and Flush Control Register 
+.SS "\fB__IM\fP uint32_t TPI_Type::FFSR"
+Offset: 0x300 (R/ ) Formatter and Flush Status Register 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION0"
+Offset: 0x028 (R/W) Function Register 0 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION1"
+Offset: 0x038 (R/W) Function Register 1 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION10"
+Offset: 0x0C8 (R/W) Function Register 10 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION11"
+Offset: 0x0D8 (R/W) Function Register 11 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION12"
+Offset: 0x0E8 (R/W) Function Register 12 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION13"
+Offset: 0x0F8 (R/W) Function Register 13 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION14"
+Offset: 0x108 (R/W) Function Register 14 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION15"
+Offset: 0x118 (R/W) Function Register 15 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION2"
+Offset: 0x048 (R/W) Function Register 2 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION3"
+Offset: 0x058 (R/W) Function Register 3 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION4"
+Offset: 0x068 (R/W) Function Register 4 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION5"
+Offset: 0x078 (R/W) Function Register 5 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION6"
+Offset: 0x088 (R/W) Function Register 6 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION7"
+Offset: 0x098 (R/W) Function Register 7 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION8"
+Offset: 0x0A8 (R/W) Function Register 8 
+.SS "\fB__IOM\fP uint32_t DWT_Type::FUNCTION9"
+Offset: 0x0B8 (R/W) Function Register 9 
+.SS "\fB__IOM\fP uint32_t NVIC_Type::IABR"
+Offset: 0x200 (R/W) Interrupt Active bit Register 
+.SS "\fB__IOM\fP uint32_t NVIC_Type::ICER"
+Offset: 0x080 (R/W) Interrupt Clear Enable Register 
+.SS "\fB__IOM\fP uint32_t NVIC_Type::ICPR"
+Offset: 0x180 (R/W) Interrupt Clear Pending Register 
+.SS "\fB__IOM\fP uint32_t SCB_Type::ICSR"
+Offset: 0x004 (R/W) Interrupt Control and State Register 
+.SS "\fB__IOM\fP uint8_t NVIC_Type::IP"
+Offset: 0x300 (R/W) Interrupt Priority Register
+.PP
+Offset: 0x300 (R/W) Interrupt Priority Register (8Bit wide) 
+.SS "\fB__IOM\fP uint8_t NVIC_Type::IPR"
+Offset: 0x300 (R/W) Interrupt Priority Register
+.PP
+Offset: 0x300 (R/W) Interrupt Priority Register (8Bit wide) 
+.SS "\fB__IOM\fP uint32_t NVIC_Type::ISER"
+Offset: 0x000 (R/W) Interrupt Set Enable Register 
+.SS "\fB__IOM\fP uint32_t NVIC_Type::ISPR"
+Offset: 0x100 (R/W) Interrupt Set Pending Register 
+.SS "uint32_t { \&.\&.\&. } ::ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t { \&.\&.\&. } ::ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t { \&.\&.\&. } ::ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t { \&.\&.\&. } ::ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t { \&.\&.\&. } ::ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t { \&.\&.\&. } ::ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t { \&.\&.\&. } ::ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t { \&.\&.\&. } ::ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t { \&.\&.\&. } ::ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t IPSR_Type::ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t { \&.\&.\&. } ::ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t { \&.\&.\&. } ::ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t xPSR_Type::ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "uint32_t { \&.\&.\&. } ::ISR"
+bit: 0\&.\&. 8 Exception number 
+.SS "\fB__IM\fP uint32_t TPI_Type::ITATBCTR0"
+Offset: 0xEF8 (R/ ) Integration Test ATB Control Register 0
+.PP
+Offset: 0xEF8 (R/ ) ITATBCTR0 
+.SS "\fB__IM\fP uint32_t TPI_Type::ITATBCTR2"
+Offset: 0xEF0 (R/W) Integration Test ATB Control Register 2
+.PP
+Offset: 0xEF0 (R/ ) ITATBCTR2 
+.SS "\fB__IOM\fP uint32_t TPI_Type::ITCTRL"
+Offset: 0xF00 (R/W) Integration Mode Control 
+.SS "\fB__IM\fP uint32_t TPI_Type::ITFTTD0"
+Offset: 0xEEC (R/ ) Integration Test FIFO Test Data 0 Register 
+.SS "\fB__IM\fP uint32_t TPI_Type::ITFTTD1"
+Offset: 0xEFC (R/ ) Integration Test FIFO Test Data 1 Register 
+.SS "\fB__IOM\fP uint32_t NVIC_Type::ITNS"
+Offset: 0x280 (R/W) Interrupt Non-Secure State Register 
+.SS "\fB__OM\fP uint32_t TPI_Type::LAR"
+Offset: 0xFB0 ( /W) Software Lock Access Register 
+.SS "\fB__IOM\fP uint32_t SysTick_Type::LOAD"
+Offset: 0x004 (R/W) SysTick Reload Value Register 
+.SS "\fB__IM\fP uint32_t TPI_Type::LSR"
+Offset: 0xFB4 (R/ ) Software Lock Status Register 
+.SS "uint32_t { \&.\&.\&. } ::N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t APSR_Type::N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t xPSR_Type::N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::N"
+bit: 31 Negative condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::nPRIV"
+bit: 0 Execution privilege in Thread mode 
+.SS "uint32_t { \&.\&.\&. } ::nPRIV"
+bit: 0 Execution privilege in Thread mode 
+.SS "uint32_t CONTROL_Type::nPRIV"
+bit: 0 Execution privilege in Thread mode 
+.SS "uint32_t { \&.\&.\&. } ::nPRIV"
+bit: 0 Execution privilege in Thread mode 
+.SS "\fB__IM\fP uint32_t DWT_Type::PCSR"
+Offset: 0x01C (R/ ) Program Counter Sample Register 
+.SS "\fB__IOM\fP uint32_t TPI_Type::PSCR"
+Offset: 0x308 (R/W) Periodic Synchronization Control Register 
+.SS "uint32_t NVIC_Type::RESERVED0"
+
+.SS "uint32_t TPI_Type::RESERVED0"
+
+.SS "uint32_t DWT_Type::RESERVED0"
+
+.SS "uint32_t SCB_Type::RESERVED0"
+
+.SS "uint32_t DWT_Type::RESERVED1"
+
+.SS "uint32_t TPI_Type::RESERVED1"
+
+.SS "uint32_t SCB_Type::RESERVED1"
+
+.SS "uint32_t DWT_Type::RESERVED10"
+
+.SS "uint32_t DWT_Type::RESERVED11"
+
+.SS "uint32_t DWT_Type::RESERVED12"
+
+.SS "uint32_t DWT_Type::RESERVED13"
+
+.SS "uint32_t DWT_Type::RESERVED14"
+
+.SS "uint32_t DWT_Type::RESERVED15"
+
+.SS "uint32_t DWT_Type::RESERVED16"
+
+.SS "uint32_t DWT_Type::RESERVED17"
+
+.SS "uint32_t DWT_Type::RESERVED18"
+
+.SS "uint32_t DWT_Type::RESERVED19"
+
+.SS "uint32_t TPI_Type::RESERVED2"
+
+.SS "uint32_t NVIC_Type::RESERVED2"
+
+.SS "uint32_t DWT_Type::RESERVED2"
+
+.SS "uint32_t DWT_Type::RESERVED20"
+
+.SS "uint32_t DWT_Type::RESERVED21"
+
+.SS "uint32_t DWT_Type::RESERVED22"
+
+.SS "uint32_t DWT_Type::RESERVED23"
+
+.SS "uint32_t DWT_Type::RESERVED24"
+
+.SS "uint32_t DWT_Type::RESERVED25"
+
+.SS "uint32_t DWT_Type::RESERVED26"
+
+.SS "uint32_t DWT_Type::RESERVED27"
+
+.SS "uint32_t DWT_Type::RESERVED28"
+
+.SS "uint32_t DWT_Type::RESERVED29"
+
+.SS "uint32_t NVIC_Type::RESERVED3"
+
+.SS "uint32_t DWT_Type::RESERVED3"
+
+.SS "uint32_t TPI_Type::RESERVED3"
+
+.SS "uint32_t DWT_Type::RESERVED30"
+
+.SS "uint32_t DWT_Type::RESERVED31"
+
+.SS "uint32_t NVIC_Type::RESERVED4"
+
+.SS "uint32_t DWT_Type::RESERVED4"
+
+.SS "uint32_t CoreDebug_Type::RESERVED4"
+
+.SS "uint32_t TPI_Type::RESERVED4"
+
+.SS "uint32_t NVIC_Type::RESERVED5"
+
+.SS "uint32_t DWT_Type::RESERVED5"
+
+.SS "uint32_t TPI_Type::RESERVED5"
+
+.SS "uint32_t DWT_Type::RESERVED6"
+
+.SS "uint32_t DWT_Type::RESERVED7"
+
+.SS "uint32_t TPI_Type::RESERVED7"
+
+.SS "uint32_t DWT_Type::RESERVED8"
+
+.SS "uint32_t DWT_Type::RESERVED9"
+
+.SS "uint32_t NVIC_Type::RSERVED1"
+
+.SS "\fB__IOM\fP uint32_t SCB_Type::SCR"
+Offset: 0x010 (R/W) System Control Register 
+.SS "\fB__IOM\fP uint32_t SCB_Type::SFCR"
+Offset: 0x290 (R/W) Security Features Control Register 
+.SS "\fB__IOM\fP uint32_t SCB_Type::SHCSR"
+Offset: 0x024 (R/W) System Handler Control and State Register 
+.SS "\fB__IOM\fP uint8_t SCB_Type::SHP"
+Offset: 0x01C (R/W) System Handlers Priority Registers\&. [0] is RESERVED
+.PP
+Offset: 0x018 (R/W) System Handlers Priority Registers (4-7, 8-11, 12-15) 
+.SS "\fB__IOM\fP uint8_t SCB_Type::SHPR"
+Offset: 0x01C (R/W) System Handlers Priority Registers\&. [0] is RESERVED
+.PP
+Offset: 0x018 (R/W) System Handlers Priority Registers (4-7, 8-11, 12-15) 
+.SS "\fB__IOM\fP uint32_t TPI_Type::SPPR"
+Offset: 0x0F0 (R/W) Selected Pin Protocol Register 
+.SS "uint32_t { \&.\&.\&. } ::SPSEL"
+bit: 1 Stack to be used 
+.SS "uint32_t { \&.\&.\&. } ::SPSEL"
+bit: 1 Stack to be used 
+.SS "uint32_t { \&.\&.\&. } ::SPSEL"
+bit: 1 Stack to be used 
+.SS "uint32_t { \&.\&.\&. } ::SPSEL"
+bit: 1 Stack to be used 
+.SS "uint32_t { \&.\&.\&. } ::SPSEL"
+bit: 1 Stack-pointer select 
+.SS "uint32_t CONTROL_Type::SPSEL"
+bit: 1 Stack-pointer select
+.PP
+bit: 1 Stack to be used 
+.SS "uint32_t { \&.\&.\&. } ::SPSEL"
+bit: 1 Stack-pointer select 
+.SS "\fB__IM\fP uint32_t TPI_Type::SSPSR"
+Offset: 0x000 (R/ ) Supported Parallel Port Sizes Register
+.PP
+Offset: 0x000 (R/ ) Supported Parallel Port Size Register 
+.SS "uint32_t { \&.\&.\&. } ::T"
+bit: 24 Thumb bit (read 0) 
+.SS "uint32_t { \&.\&.\&. } ::T"
+bit: 24 Thumb bit (read 0) 
+.SS "uint32_t { \&.\&.\&. } ::T"
+bit: 24 Thumb bit (read 0) 
+.SS "uint32_t { \&.\&.\&. } ::T"
+bit: 24 Thumb bit (read 0) 
+.SS "uint32_t { \&.\&.\&. } ::T"
+bit: 24 Thumb bit (read 0) 
+.SS "uint32_t xPSR_Type::T"
+bit: 24 Thumb bit (read 0)
+.PP
+bit: 24 Thumb bit 
+.SS "uint32_t { \&.\&.\&. } ::T"
+bit: 24 Thumb bit (read 0) 
+.SS "\fB__IM\fP uint32_t TPI_Type::TRIGGER"
+Offset: 0xEE8 (R/ ) TRIGGER Register 
+.SS "\fB__IM\fP uint32_t TPI_Type::TYPE"
+Offset: 0xFC8 (R/ ) Device Identifier Register 
+.SS "uint32_t { \&.\&.\&. } ::V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t APSR_Type::V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::V"
+bit: 28 Overflow condition code flag 
+.SS "uint32_t xPSR_Type::V"
+bit: 28 Overflow condition code flag 
+.SS "\fB__IOM\fP uint32_t SysTick_Type::VAL"
+Offset: 0x008 (R/W) SysTick Current Value Register 
+.SS "uint32_t APSR_Type::w"
+Type used for word access 
+.SS "uint32_t IPSR_Type::w"
+Type used for word access 
+.SS "uint32_t xPSR_Type::w"
+Type used for word access 
+.SS "uint32_t CONTROL_Type::w"
+Type used for word access 
+.SS "uint32_t { \&.\&.\&. } ::Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t APSR_Type::Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t { \&.\&.\&. } ::Z"
+bit: 30 Zero condition code flag 
+.SS "uint32_t xPSR_Type::Z"
+bit: 30 Zero condition code flag 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for lcd_display from the source code\&.

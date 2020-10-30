@@ -1,0 +1,69 @@
+.TH "RCC_Private_Constants" 3 "Thu Oct 29 2020" "lcd_display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_Private_Constants
+.SH SYNOPSIS
+.br
+.PP
+.SS "Modules"
+
+.in +1c
+.ti -1c
+.RI "\fBRCC Timeout\fP"
+.br
+.ti -1c
+.RI "\fBRegister offsets\fP"
+.br
+.ti -1c
+.RI "\fBBitAddress AliasRegion\fP"
+.br
+.RI "RCC registers bit address in the alias region\&. "
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRCC_CR_BYTE2_ADDRESS\fP   ((uint32_t)(\fBRCC_BASE\fP + \fBRCC_CR_OFFSET\fP + 0x02U))"
+.br
+.ti -1c
+.RI "#define \fBRCC_CIR_BYTE1_ADDRESS\fP   ((uint32_t)(\fBRCC_BASE\fP + \fBRCC_CIR_OFFSET\fP + 0x01U))"
+.br
+.ti -1c
+.RI "#define \fBRCC_CIR_BYTE2_ADDRESS\fP   ((uint32_t)(\fBRCC_BASE\fP + \fBRCC_CIR_OFFSET\fP + 0x02U))"
+.br
+.ti -1c
+.RI "#define \fBCR_REG_INDEX\fP   ((uint8_t)1)"
+.br
+.ti -1c
+.RI "#define \fBBDCR_REG_INDEX\fP   ((uint8_t)2)"
+.br
+.ti -1c
+.RI "#define \fBCSR_REG_INDEX\fP   ((uint8_t)3)"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_MASK\fP   ((uint8_t)0x1F)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BDCR_REG_INDEX   ((uint8_t)2)"
+
+.SS "#define CR_REG_INDEX   ((uint8_t)1)"
+
+.SS "#define CSR_REG_INDEX   ((uint8_t)3)"
+
+.SS "#define RCC_CIR_BYTE1_ADDRESS   ((uint32_t)(\fBRCC_BASE\fP + \fBRCC_CIR_OFFSET\fP + 0x01U))"
+
+.SS "#define RCC_CIR_BYTE2_ADDRESS   ((uint32_t)(\fBRCC_BASE\fP + \fBRCC_CIR_OFFSET\fP + 0x02U))"
+
+.SS "#define RCC_CR_BYTE2_ADDRESS   ((uint32_t)(\fBRCC_BASE\fP + \fBRCC_CR_OFFSET\fP + 0x02U))"
+
+.SS "#define RCC_FLAG_MASK   ((uint8_t)0x1F)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for lcd_display from the source code\&.

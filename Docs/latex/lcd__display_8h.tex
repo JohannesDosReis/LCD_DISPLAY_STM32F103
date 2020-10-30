@@ -1,0 +1,239 @@
+\hypertarget{lcd__display_8h}{}\doxysection{Core/\+Inc/lcd\+\_\+display.h File Reference}
+\label{lcd__display_8h}\index{Core/Inc/lcd\_display.h@{Core/Inc/lcd\_display.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stm32f1xx\+\_\+hal.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lcd__display_8h_a4781e073871c6f27f89b9463ad3a4ed1}{L\+C\+D\+\_\+\+RS}}~\mbox{\hyperlink{group___g_p_i_o__pins__define_ga176efbf43a259b7bb0a85a47401505be}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+0}}
+\item 
+\#define \mbox{\hyperlink{lcd__display_8h_a1640ffbc0d8ec0f7edb04a2b93918072}{L\+C\+D\+\_\+\+EN}}~\mbox{\hyperlink{group___g_p_i_o__pins__define_ga6c35af4e75c3cb57bb650feaa7a136b5}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+1}}
+\item 
+\#define \mbox{\hyperlink{lcd__display_8h_a633642a9a86d32062329c1de46d68faf}{L\+C\+D\+\_\+\+P\+O\+R\+T\+\_\+\+D\+A\+TA}}~\mbox{\hyperlink{group___peripheral__declaration_gac485358099728ddae050db37924dd6b7}{G\+P\+I\+OA}}
+\item 
+\#define \mbox{\hyperlink{lcd__display_8h_a746a0800f21b0b3812fbccd8edeee965}{L\+C\+D\+\_\+\+P\+O\+R\+T\+\_\+\+C\+T\+RL}}~\mbox{\hyperlink{group___peripheral__declaration_ga68b66ac73be4c836db878a42e1fea3cd}{G\+P\+I\+OB}}
+\item 
+\#define \mbox{\hyperlink{lcd__display_8h_a71713fbcfe3a9fa6bdb9e0e34dfad60a}{L\+C\+D\+\_\+\+D\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK}}~0x\+F0
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lcd__display_8h_ac23e73124dc9fabae95671fe71d074a6}{lcd\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize of the L\+CD display Initialize in 4-\/bit mode, cursor off, shift cursor to right and clear the L\+CD screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd__display_8h_a35c08b1fa742e650f4873939707b893b}{lcd\+\_\+clear}} ()
+\begin{DoxyCompactList}\small\item\em Clear the L\+CD screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd__display_8h_ab2886b3149a3b7c64afefccec3c93af5}{lcd\+\_\+cmd}} (char cmd)
+\begin{DoxyCompactList}\small\item\em Send a command to the L\+CD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd__display_8h_a27a064b1fe34b0037993c515502bb541}{lcd\+\_\+char}} (char data)
+\begin{DoxyCompactList}\small\item\em Send data to L\+CD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd__display_8h_a7dfa908eb0388e4c93870f5f67c9bc12}{lcd\+\_\+string}} (const char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Send a string of data to the L\+CD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd__display_8h_afabb862120a862d88cf8a7ea23edcea9}{lcd\+\_\+string\+\_\+pos}} (char pos, const char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Send a string of data to the L\+CD on a specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd__display_8h_a887a397c46d77cc19373f69a3e54e752}{lcd\+\_\+custom\+\_\+char}} (unsigned char loc, unsigned char $\ast$msg)
+\begin{DoxyCompactList}\small\item\em Set a custom character on the L\+CD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd__display_8h_a9d1bbb4853531de5bc908a189c846ae4}{lcd\+\_\+time}} ()
+\begin{DoxyCompactList}\small\item\em Tempo para dar o pulso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lcd__display_8h_a69c1f84ee1f512a4cd1f037328bac36f}{lcd\+\_\+default\+\_\+custom\+\_\+char}} ()
+\begin{DoxyCompactList}\small\item\em Load the default custom characters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lcd__display_8h_a71713fbcfe3a9fa6bdb9e0e34dfad60a}\label{lcd__display_8h_a71713fbcfe3a9fa6bdb9e0e34dfad60a}} 
+\index{lcd\_display.h@{lcd\_display.h}!LCD\_D\_BIT\_MASK@{LCD\_D\_BIT\_MASK}}
+\index{LCD\_D\_BIT\_MASK@{LCD\_D\_BIT\_MASK}!lcd\_display.h@{lcd\_display.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_D\_BIT\_MASK}{LCD\_D\_BIT\_MASK}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+D\+\_\+\+B\+I\+T\+\_\+\+M\+A\+SK~0x\+F0}
+
+\mbox{\Hypertarget{lcd__display_8h_a1640ffbc0d8ec0f7edb04a2b93918072}\label{lcd__display_8h_a1640ffbc0d8ec0f7edb04a2b93918072}} 
+\index{lcd\_display.h@{lcd\_display.h}!LCD\_EN@{LCD\_EN}}
+\index{LCD\_EN@{LCD\_EN}!lcd\_display.h@{lcd\_display.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_EN}{LCD\_EN}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+EN~\mbox{\hyperlink{group___g_p_i_o__pins__define_ga6c35af4e75c3cb57bb650feaa7a136b5}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+1}}}
+
+\mbox{\Hypertarget{lcd__display_8h_a746a0800f21b0b3812fbccd8edeee965}\label{lcd__display_8h_a746a0800f21b0b3812fbccd8edeee965}} 
+\index{lcd\_display.h@{lcd\_display.h}!LCD\_PORT\_CTRL@{LCD\_PORT\_CTRL}}
+\index{LCD\_PORT\_CTRL@{LCD\_PORT\_CTRL}!lcd\_display.h@{lcd\_display.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_PORT\_CTRL}{LCD\_PORT\_CTRL}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+P\+O\+R\+T\+\_\+\+C\+T\+RL~\mbox{\hyperlink{group___peripheral__declaration_ga68b66ac73be4c836db878a42e1fea3cd}{G\+P\+I\+OB}}}
+
+\mbox{\Hypertarget{lcd__display_8h_a633642a9a86d32062329c1de46d68faf}\label{lcd__display_8h_a633642a9a86d32062329c1de46d68faf}} 
+\index{lcd\_display.h@{lcd\_display.h}!LCD\_PORT\_DATA@{LCD\_PORT\_DATA}}
+\index{LCD\_PORT\_DATA@{LCD\_PORT\_DATA}!lcd\_display.h@{lcd\_display.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_PORT\_DATA}{LCD\_PORT\_DATA}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+P\+O\+R\+T\+\_\+\+D\+A\+TA~\mbox{\hyperlink{group___peripheral__declaration_gac485358099728ddae050db37924dd6b7}{G\+P\+I\+OA}}}
+
+\mbox{\Hypertarget{lcd__display_8h_a4781e073871c6f27f89b9463ad3a4ed1}\label{lcd__display_8h_a4781e073871c6f27f89b9463ad3a4ed1}} 
+\index{lcd\_display.h@{lcd\_display.h}!LCD\_RS@{LCD\_RS}}
+\index{LCD\_RS@{LCD\_RS}!lcd\_display.h@{lcd\_display.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_RS}{LCD\_RS}}
+{\footnotesize\ttfamily \#define L\+C\+D\+\_\+\+RS~\mbox{\hyperlink{group___g_p_i_o__pins__define_ga176efbf43a259b7bb0a85a47401505be}{G\+P\+I\+O\+\_\+\+P\+I\+N\+\_\+0}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lcd__display_8h_a27a064b1fe34b0037993c515502bb541}\label{lcd__display_8h_a27a064b1fe34b0037993c515502bb541}} 
+\index{lcd\_display.h@{lcd\_display.h}!lcd\_char@{lcd\_char}}
+\index{lcd\_char@{lcd\_char}!lcd\_display.h@{lcd\_display.h}}
+\doxysubsubsection{\texorpdfstring{lcd\_char()}{lcd\_char()}}
+{\footnotesize\ttfamily void lcd\+\_\+char (\begin{DoxyParamCaption}\item[{char}]{data }\end{DoxyParamCaption})}
+
+
+
+Send data to L\+CD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to be sent to the L\+CD \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{lcd__display_8h_a35c08b1fa742e650f4873939707b893b}\label{lcd__display_8h_a35c08b1fa742e650f4873939707b893b}} 
+\index{lcd\_display.h@{lcd\_display.h}!lcd\_clear@{lcd\_clear}}
+\index{lcd\_clear@{lcd\_clear}!lcd\_display.h@{lcd\_display.h}}
+\doxysubsubsection{\texorpdfstring{lcd\_clear()}{lcd\_clear()}}
+{\footnotesize\ttfamily void lcd\+\_\+clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear the L\+CD screen. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{lcd__display_8h_ab2886b3149a3b7c64afefccec3c93af5}\label{lcd__display_8h_ab2886b3149a3b7c64afefccec3c93af5}} 
+\index{lcd\_display.h@{lcd\_display.h}!lcd\_cmd@{lcd\_cmd}}
+\index{lcd\_cmd@{lcd\_cmd}!lcd\_display.h@{lcd\_display.h}}
+\doxysubsubsection{\texorpdfstring{lcd\_cmd()}{lcd\_cmd()}}
+{\footnotesize\ttfamily void lcd\+\_\+cmd (\begin{DoxyParamCaption}\item[{char}]{cmd }\end{DoxyParamCaption})}
+
+
+
+Send a command to the L\+CD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & The command to be sent to the L\+CD \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{lcd__display_8h_a887a397c46d77cc19373f69a3e54e752}\label{lcd__display_8h_a887a397c46d77cc19373f69a3e54e752}} 
+\index{lcd\_display.h@{lcd\_display.h}!lcd\_custom\_char@{lcd\_custom\_char}}
+\index{lcd\_custom\_char@{lcd\_custom\_char}!lcd\_display.h@{lcd\_display.h}}
+\doxysubsubsection{\texorpdfstring{lcd\_custom\_char()}{lcd\_custom\_char()}}
+{\footnotesize\ttfamily void lcd\+\_\+custom\+\_\+char (\begin{DoxyParamCaption}\item[{unsigned char}]{loc,  }\item[{unsigned char $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+Set a custom character on the L\+CD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & The location of the character should be set \mbox{[}0 -\/ 8\mbox{]} \\
+\hline
+{\em msg} & The character to set \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{lcd__display_8h_a69c1f84ee1f512a4cd1f037328bac36f}\label{lcd__display_8h_a69c1f84ee1f512a4cd1f037328bac36f}} 
+\index{lcd\_display.h@{lcd\_display.h}!lcd\_default\_custom\_char@{lcd\_default\_custom\_char}}
+\index{lcd\_default\_custom\_char@{lcd\_default\_custom\_char}!lcd\_display.h@{lcd\_display.h}}
+\doxysubsubsection{\texorpdfstring{lcd\_default\_custom\_char()}{lcd\_default\_custom\_char()}}
+{\footnotesize\ttfamily void lcd\+\_\+default\+\_\+custom\+\_\+char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load the default custom characters. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{lcd__display_8h_ac23e73124dc9fabae95671fe71d074a6}\label{lcd__display_8h_ac23e73124dc9fabae95671fe71d074a6}} 
+\index{lcd\_display.h@{lcd\_display.h}!lcd\_init@{lcd\_init}}
+\index{lcd\_init@{lcd\_init}!lcd\_display.h@{lcd\_display.h}}
+\doxysubsubsection{\texorpdfstring{lcd\_init()}{lcd\_init()}}
+{\footnotesize\ttfamily void lcd\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize of the L\+CD display Initialize in 4-\/bit mode, cursor off, shift cursor to right and clear the L\+CD screen. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{lcd__display_8h_a7dfa908eb0388e4c93870f5f67c9bc12}\label{lcd__display_8h_a7dfa908eb0388e4c93870f5f67c9bc12}} 
+\index{lcd\_display.h@{lcd\_display.h}!lcd\_string@{lcd\_string}}
+\index{lcd\_string@{lcd\_string}!lcd\_display.h@{lcd\_display.h}}
+\doxysubsubsection{\texorpdfstring{lcd\_string()}{lcd\_string()}}
+{\footnotesize\ttfamily void lcd\+\_\+string (\begin{DoxyParamCaption}\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+Send a string of data to the L\+CD. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The string to be sent to the L\+CD \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{lcd__display_8h_afabb862120a862d88cf8a7ea23edcea9}\label{lcd__display_8h_afabb862120a862d88cf8a7ea23edcea9}} 
+\index{lcd\_display.h@{lcd\_display.h}!lcd\_string\_pos@{lcd\_string\_pos}}
+\index{lcd\_string\_pos@{lcd\_string\_pos}!lcd\_display.h@{lcd\_display.h}}
+\doxysubsubsection{\texorpdfstring{lcd\_string\_pos()}{lcd\_string\_pos()}}
+{\footnotesize\ttfamily void lcd\+\_\+string\+\_\+pos (\begin{DoxyParamCaption}\item[{char}]{pos,  }\item[{const char $\ast$}]{msg }\end{DoxyParamCaption})}
+
+
+
+Send a string of data to the L\+CD on a specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The position on the L\+CD where the string should be displayed \\
+\hline
+{\em msg} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{lcd__display_8h_a9d1bbb4853531de5bc908a189c846ae4}\label{lcd__display_8h_a9d1bbb4853531de5bc908a189c846ae4}} 
+\index{lcd\_display.h@{lcd\_display.h}!lcd\_time@{lcd\_time}}
+\index{lcd\_time@{lcd\_time}!lcd\_display.h@{lcd\_display.h}}
+\doxysubsubsection{\texorpdfstring{lcd\_time()}{lcd\_time()}}
+{\footnotesize\ttfamily void lcd\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tempo para dar o pulso. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

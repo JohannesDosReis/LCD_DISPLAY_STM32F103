@@ -1,0 +1,525 @@
+.TH "Exported_macro" 3 "Thu Oct 29 2020" "lcd_display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Exported_macro
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBIS_ADC_ALL_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_COMMON_INSTANCE\fP(INSTANCE)   ((INSTANCE) == \fBADC12_COMMON\fP)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_MULTIMODE_MASTER_INSTANCE\fP(INSTANCE)   ((INSTANCE) == \fBADC1\fP)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_DMA_CAPABILITY_INSTANCE\fP(INSTANCE)   ((INSTANCE) == \fBADC1\fP)"
+.br
+.ti -1c
+.RI "#define \fBIS_CAN_ALL_INSTANCE\fP(INSTANCE)   ((INSTANCE) == \fBCAN1\fP)"
+.br
+.ti -1c
+.RI "#define \fBIS_CRC_ALL_INSTANCE\fP(INSTANCE)   ((INSTANCE) == \fBCRC\fP)"
+.br
+.ti -1c
+.RI "#define \fBIS_DMA_ALL_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_GPIO_ALL_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_GPIO_AF_INSTANCE\fP(INSTANCE)   \fBIS_GPIO_ALL_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_GPIO_LOCK_INSTANCE\fP(INSTANCE)   \fBIS_GPIO_ALL_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_I2C_ALL_INSTANCE\fP(INSTANCE)   ((INSTANCE) == \fBI2C1\fP)"
+.br
+.ti -1c
+.RI "#define \fBIS_SMBUS_ALL_INSTANCE\fP   \fBIS_I2C_ALL_INSTANCE\fP"
+.br
+.ti -1c
+.RI "#define \fBIS_IWDG_ALL_INSTANCE\fP(INSTANCE)   ((INSTANCE) == \fBIWDG\fP)"
+.br
+.ti -1c
+.RI "#define \fBIS_SPI_ALL_INSTANCE\fP(INSTANCE)   ((INSTANCE) == \fBSPI1\fP)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_ADVANCED_INSTANCE\fP(INSTANCE)   ((INSTANCE) == \fBTIM1\fP)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_CC1_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_CC2_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_CC3_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_CC4_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_CLOCKSOURCE_ETRMODE1_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_CLOCKSOURCE_ETRMODE2_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_CLOCKSOURCE_TIX_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_CLOCKSOURCE_ITRX_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_OCXREF_CLEAR_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_ENCODER_INTERFACE_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_XOR_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_MASTER_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_SLAVE_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_DMABURST_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_BREAK_INSTANCE\fP(INSTANCE)   ((INSTANCE) == \fBTIM1\fP)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_CCX_INSTANCE\fP(INSTANCE,  CHANNEL)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_CCXN_INSTANCE\fP(INSTANCE,  CHANNEL)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_COUNTER_MODE_SELECT_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_REPETITION_COUNTER_INSTANCE\fP(INSTANCE)   ((INSTANCE) == \fBTIM1\fP)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_CLOCK_DIVISION_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_DMA_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_DMA_CC_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_COMMUTATION_EVENT_INSTANCE\fP(INSTANCE)   ((INSTANCE) == \fBTIM1\fP)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_ETR_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_HALL_SENSOR_INTERFACE_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIM_32B_COUNTER_INSTANCE\fP(INSTANCE)   0U"
+.br
+.ti -1c
+.RI "#define \fBIS_USART_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_HALFDUPLEX_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_LIN_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_HWFLOW_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_SMARTCARD_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_IRDA_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_MULTIPROCESSOR_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_DMA_INSTANCE\fP(INSTANCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_ALL_INSTANCE\fP(INSTANCE)   ((INSTANCE) == \fBRTC\fP)"
+.br
+.ti -1c
+.RI "#define \fBIS_WWDG_ALL_INSTANCE\fP(INSTANCE)   ((INSTANCE) == \fBWWDG\fP)"
+.br
+.ti -1c
+.RI "#define \fBIS_PCD_ALL_INSTANCE\fP(INSTANCE)   ((INSTANCE) == \fBUSB\fP)"
+.br
+.ti -1c
+.RI "#define \fBRCC_HSE_MIN\fP   4000000U"
+.br
+.ti -1c
+.RI "#define \fBRCC_HSE_MAX\fP   16000000U"
+.br
+.ti -1c
+.RI "#define \fBRCC_MAX_FREQUENCY\fP   72000000U"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define IS_ADC_ALL_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == ADC1) || \
+                                       ((INSTANCE) == ADC2))
+.fi
+.SS "#define IS_ADC_COMMON_INSTANCE(INSTANCE)   ((INSTANCE) == \fBADC12_COMMON\fP)"
+
+.SS "#define IS_ADC_DMA_CAPABILITY_INSTANCE(INSTANCE)   ((INSTANCE) == \fBADC1\fP)"
+
+.SS "#define IS_ADC_MULTIMODE_MASTER_INSTANCE(INSTANCE)   ((INSTANCE) == \fBADC1\fP)"
+
+.SS "#define IS_CAN_ALL_INSTANCE(INSTANCE)   ((INSTANCE) == \fBCAN1\fP)"
+
+.SS "#define IS_CRC_ALL_INSTANCE(INSTANCE)   ((INSTANCE) == \fBCRC\fP)"
+
+.SS "#define IS_DMA_ALL_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == DMA1_Channel1) || \
+                                       ((INSTANCE) == DMA1_Channel2) || \
+                                       ((INSTANCE) == DMA1_Channel3) || \
+                                       ((INSTANCE) == DMA1_Channel4) || \
+                                       ((INSTANCE) == DMA1_Channel5) || \
+                                       ((INSTANCE) == DMA1_Channel6) || \
+                                       ((INSTANCE) == DMA1_Channel7))
+.fi
+.SS "#define IS_GPIO_AF_INSTANCE(INSTANCE)   \fBIS_GPIO_ALL_INSTANCE\fP(INSTANCE)"
+
+.SS "#define IS_GPIO_ALL_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == GPIOA) || \
+                                        ((INSTANCE) == GPIOB) || \
+                                        ((INSTANCE) == GPIOC) || \
+                                        ((INSTANCE) == GPIOD))
+.fi
+.SS "#define IS_GPIO_LOCK_INSTANCE(INSTANCE)   \fBIS_GPIO_ALL_INSTANCE\fP(INSTANCE)"
+
+.SS "#define IS_I2C_ALL_INSTANCE(INSTANCE)   ((INSTANCE) == \fBI2C1\fP)"
+
+.SS "#define IS_IRDA_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == USART1) || \
+                                    ((INSTANCE) == USART2) )
+.fi
+.SS "#define IS_IWDG_ALL_INSTANCE(INSTANCE)   ((INSTANCE) == \fBIWDG\fP)"
+
+.SS "#define IS_PCD_ALL_INSTANCE(INSTANCE)   ((INSTANCE) == \fBUSB\fP)"
+
+.SS "#define IS_RTC_ALL_INSTANCE(INSTANCE)   ((INSTANCE) == \fBRTC\fP)"
+
+.SS "#define IS_SMARTCARD_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == USART1) || \
+                                         ((INSTANCE) == USART2) )
+.fi
+.SS "#define IS_SMBUS_ALL_INSTANCE   \fBIS_I2C_ALL_INSTANCE\fP"
+
+.SS "#define IS_SPI_ALL_INSTANCE(INSTANCE)   ((INSTANCE) == \fBSPI1\fP)"
+
+.SS "#define IS_TIM_32B_COUNTER_INSTANCE(INSTANCE)   0U"
+
+.SS "#define IS_TIM_ADVANCED_INSTANCE(INSTANCE)   ((INSTANCE) == \fBTIM1\fP)"
+
+.SS "#define IS_TIM_BREAK_INSTANCE(INSTANCE)   ((INSTANCE) == \fBTIM1\fP)"
+
+.SS "#define IS_TIM_CC1_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_CC2_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_CC3_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_CC4_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_CCX_INSTANCE(INSTANCE, CHANNEL)"
+\fBValue:\fP
+.PP
+.nf
+((((INSTANCE) == TIM1) &&                  \
+     (((CHANNEL) == TIM_CHANNEL_1) ||          \
+      ((CHANNEL) == TIM_CHANNEL_2) ||          \
+      ((CHANNEL) == TIM_CHANNEL_3) ||          \
+      ((CHANNEL) == TIM_CHANNEL_4)))           \
+    ||                                         \
+    (((INSTANCE) == TIM2) &&                   \
+     (((CHANNEL) == TIM_CHANNEL_1) ||          \
+      ((CHANNEL) == TIM_CHANNEL_2) ||          \
+      ((CHANNEL) == TIM_CHANNEL_3) ||          \
+      ((CHANNEL) == TIM_CHANNEL_4)))           \
+    ||                                         \
+    (((INSTANCE) == TIM3) &&                   \
+     (((CHANNEL) == TIM_CHANNEL_1) ||          \
+      ((CHANNEL) == TIM_CHANNEL_2) ||          \
+      ((CHANNEL) == TIM_CHANNEL_3) ||          \
+      ((CHANNEL) == TIM_CHANNEL_4))))
+.fi
+.SS "#define IS_TIM_CCXN_INSTANCE(INSTANCE, CHANNEL)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1) &&                    \
+     (((CHANNEL) == TIM_CHANNEL_1) ||           \
+      ((CHANNEL) == TIM_CHANNEL_2) ||           \
+      ((CHANNEL) == TIM_CHANNEL_3)))
+.fi
+.SS "#define IS_TIM_CLOCK_DIVISION_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_CLOCKSOURCE_ETRMODE1_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_CLOCKSOURCE_ETRMODE2_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_CLOCKSOURCE_ITRX_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_CLOCKSOURCE_TIX_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_COMMUTATION_EVENT_INSTANCE(INSTANCE)   ((INSTANCE) == \fBTIM1\fP)"
+
+.SS "#define IS_TIM_COUNTER_MODE_SELECT_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_DMA_CC_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_DMA_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_DMABURST_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_ENCODER_INTERFACE_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_ETR_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+                                        ((INSTANCE) == TIM2)    || \
+                                        ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_HALL_SENSOR_INTERFACE_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+                                                         ((INSTANCE) == TIM2)    || \
+                                                         ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_MASTER_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_OCXREF_CLEAR_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_REPETITION_COUNTER_INSTANCE(INSTANCE)   ((INSTANCE) == \fBTIM1\fP)"
+
+.SS "#define IS_TIM_SLAVE_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_TIM_XOR_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == TIM1)    || \
+   ((INSTANCE) == TIM2)    || \
+   ((INSTANCE) == TIM3))
+.fi
+.SS "#define IS_UART_DMA_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == USART1) || \
+                                        ((INSTANCE) == USART2))
+.fi
+.SS "#define IS_UART_HALFDUPLEX_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == USART1) || \
+                                               ((INSTANCE) == USART2) )
+.fi
+.SS "#define IS_UART_HWFLOW_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == USART1) || \
+                                           ((INSTANCE) == USART2) )
+.fi
+.SS "#define IS_UART_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == USART1) || \
+                                    ((INSTANCE) == USART2) )
+.fi
+.SS "#define IS_UART_LIN_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == USART1) || \
+                                        ((INSTANCE) == USART2) )
+.fi
+.SS "#define IS_UART_MULTIPROCESSOR_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == USART1) || \
+                                                   ((INSTANCE) == USART2) )
+.fi
+.SS "#define IS_USART_INSTANCE(INSTANCE)"
+\fBValue:\fP
+.PP
+.nf
+(((INSTANCE) == USART1) || \
+                                     ((INSTANCE) == USART2))
+.fi
+.SS "#define IS_WWDG_ALL_INSTANCE(INSTANCE)   ((INSTANCE) == \fBWWDG\fP)"
+
+.SS "#define RCC_HSE_MAX   16000000U"
+
+.SS "#define RCC_HSE_MIN   4000000U"
+
+.SS "#define RCC_MAX_FREQUENCY   72000000U"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for lcd_display from the source code\&.

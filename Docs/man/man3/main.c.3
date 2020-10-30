@@ -1,0 +1,104 @@
+.TH "Core/Src/main.c" 3 "Thu Oct 29 2020" "lcd_display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Core/Src/main.c \- : Main program body  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'main\&.h'\fP
+.br
+\fC#include 'lcd_display\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBSystemClock_Config\fP (void)"
+.br
+.RI "System Clock Configuration\&. "
+.ti -1c
+.RI "static void \fBMX_GPIO_Init\fP (void)"
+.br
+.RI "GPIO Initialization Function\&. "
+.ti -1c
+.RI "int \fBmain\fP (void)"
+.br
+.RI "The application entry point\&. "
+.ti -1c
+.RI "void \fBError_Handler\fP (void)"
+.br
+.RI "This function is executed in case of error occurrence\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+: Main program body 
+
+
+.PP
+\fBAttention\fP
+.RS 4
+
+.RE
+.PP
+.SS "(C) Copyright (c) 2020 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.SH "Function Documentation"
+.PP 
+.SS "void Error_Handler (void)"
+
+.PP
+This function is executed in case of error occurrence\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "int main (void)"
+
+.PP
+The application entry point\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fIint\fP 
+.RE
+.PP
+
+.SS "static void MX_GPIO_Init (void)\fC [static]\fP"
+
+.PP
+GPIO Initialization Function\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void SystemClock_Config (void)"
+
+.PP
+System Clock Configuration\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+Initializes the RCC Oscillators according to the specified parameters in the \fBRCC_OscInitTypeDef\fP structure\&.
+.PP
+Initializes the CPU, AHB and APB buses clocks
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for lcd_display from the source code\&.

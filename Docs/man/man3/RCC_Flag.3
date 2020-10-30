@@ -1,0 +1,92 @@
+.TH "RCC_Flag" 3 "Thu Oct 29 2020" "lcd_display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_Flag \- Elements values convention: XXXYYYYYb\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRCC_FLAG_HSIRDY\fP   ((uint8_t)((\fBCR_REG_INDEX\fP << 5U) | \fBRCC_CR_HSIRDY_Pos\fP))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_HSERDY\fP   ((uint8_t)((\fBCR_REG_INDEX\fP << 5U) | \fBRCC_CR_HSERDY_Pos\fP))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_PLLRDY\fP   ((uint8_t)((\fBCR_REG_INDEX\fP << 5U) | \fBRCC_CR_PLLRDY_Pos\fP))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_LSIRDY\fP   ((uint8_t)((\fBCSR_REG_INDEX\fP << 5U) | \fBRCC_CSR_LSIRDY_Pos\fP))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_PINRST\fP   ((uint8_t)((\fBCSR_REG_INDEX\fP << 5U) | \fBRCC_CSR_PINRSTF_Pos\fP))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_PORRST\fP   ((uint8_t)((\fBCSR_REG_INDEX\fP << 5U) | \fBRCC_CSR_PORRSTF_Pos\fP))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_SFTRST\fP   ((uint8_t)((\fBCSR_REG_INDEX\fP << 5U) | \fBRCC_CSR_SFTRSTF_Pos\fP))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_IWDGRST\fP   ((uint8_t)((\fBCSR_REG_INDEX\fP << 5U) | \fBRCC_CSR_IWDGRSTF_Pos\fP))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_WWDGRST\fP   ((uint8_t)((\fBCSR_REG_INDEX\fP << 5U) | \fBRCC_CSR_WWDGRSTF_Pos\fP))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_LPWRRST\fP   ((uint8_t)((\fBCSR_REG_INDEX\fP << 5U) | \fBRCC_CSR_LPWRRSTF_Pos\fP))"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_LSERDY\fP   ((uint8_t)((\fBBDCR_REG_INDEX\fP << 5U) | \fBRCC_BDCR_LSERDY_Pos\fP))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Elements values convention: XXXYYYYYb\&. 
+
+
+.IP "\(bu" 2
+YYYYY : Flag position in the register
+.IP "\(bu" 2
+XXX : Register index
+.IP "  \(bu" 4
+001: CR register
+.IP "  \(bu" 4
+010: BDCR register
+.IP "  \(bu" 4
+011: CSR register 
+.PP
+
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define RCC_FLAG_HSERDY   ((uint8_t)((\fBCR_REG_INDEX\fP << 5U) | \fBRCC_CR_HSERDY_Pos\fP))"
+External High Speed clock ready flag 
+.SS "#define RCC_FLAG_HSIRDY   ((uint8_t)((\fBCR_REG_INDEX\fP << 5U) | \fBRCC_CR_HSIRDY_Pos\fP))"
+Internal High Speed clock ready flag 
+.SS "#define RCC_FLAG_IWDGRST   ((uint8_t)((\fBCSR_REG_INDEX\fP << 5U) | \fBRCC_CSR_IWDGRSTF_Pos\fP))"
+Independent Watchdog reset flag 
+.SS "#define RCC_FLAG_LPWRRST   ((uint8_t)((\fBCSR_REG_INDEX\fP << 5U) | \fBRCC_CSR_LPWRRSTF_Pos\fP))"
+Low-Power reset flag 
+.SS "#define RCC_FLAG_LSERDY   ((uint8_t)((\fBBDCR_REG_INDEX\fP << 5U) | \fBRCC_BDCR_LSERDY_Pos\fP))"
+External Low Speed oscillator Ready 
+.SS "#define RCC_FLAG_LSIRDY   ((uint8_t)((\fBCSR_REG_INDEX\fP << 5U) | \fBRCC_CSR_LSIRDY_Pos\fP))"
+Internal Low Speed oscillator Ready 
+.SS "#define RCC_FLAG_PINRST   ((uint8_t)((\fBCSR_REG_INDEX\fP << 5U) | \fBRCC_CSR_PINRSTF_Pos\fP))"
+PIN reset flag 
+.SS "#define RCC_FLAG_PLLRDY   ((uint8_t)((\fBCR_REG_INDEX\fP << 5U) | \fBRCC_CR_PLLRDY_Pos\fP))"
+PLL clock ready flag 
+.SS "#define RCC_FLAG_PORRST   ((uint8_t)((\fBCSR_REG_INDEX\fP << 5U) | \fBRCC_CSR_PORRSTF_Pos\fP))"
+POR/PDR reset flag 
+.SS "#define RCC_FLAG_SFTRST   ((uint8_t)((\fBCSR_REG_INDEX\fP << 5U) | \fBRCC_CSR_SFTRSTF_Pos\fP))"
+Software Reset flag 
+.SS "#define RCC_FLAG_WWDGRST   ((uint8_t)((\fBCSR_REG_INDEX\fP << 5U) | \fBRCC_CSR_WWDGRSTF_Pos\fP))"
+Window watchdog reset flag 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for lcd_display from the source code\&.

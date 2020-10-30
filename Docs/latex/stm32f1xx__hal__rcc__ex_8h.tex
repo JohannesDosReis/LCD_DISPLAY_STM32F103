@@ -1,0 +1,117 @@
+\hypertarget{stm32f1xx__hal__rcc__ex_8h}{}\doxysection{Drivers/\+S\+T\+M32\+F1xx\+\_\+\+H\+A\+L\+\_\+\+Driver/\+Inc/stm32f1xx\+\_\+hal\+\_\+rcc\+\_\+ex.h File Reference}
+\label{stm32f1xx__hal__rcc__ex_8h}\index{Drivers/STM32F1xx\_HAL\_Driver/Inc/stm32f1xx\_hal\_rcc\_ex.h@{Drivers/STM32F1xx\_HAL\_Driver/Inc/stm32f1xx\_hal\_rcc\_ex.h}}
+
+
+Header file of R\+CC H\+AL Extension module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f1xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_r_c_c___osc_init_type_def}{R\+C\+C\+\_\+\+Osc\+Init\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em R\+CC Internal/\+External Oscillator (H\+SE, H\+SI, L\+SE and L\+SI) configuration structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def}{R\+C\+C\+\_\+\+Periph\+C\+L\+K\+Init\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em R\+CC extended clocks structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___private___constants_ga56feb1abcd35b22427fa55164c585afa}{C\+R\+\_\+\+R\+E\+G\+\_\+\+I\+N\+D\+EX}}~((uint8\+\_\+t)1)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___private___macros_gac11d788cab2ff6f84e2cab45da43c5d4}{I\+S\+\_\+\+R\+C\+C\+\_\+\+H\+S\+E\+\_\+\+P\+R\+E\+D\+IV}}(\+\_\+\+\_\+\+D\+I\+V\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+D\+I\+V\+\_\+\+\_\+) == \mbox{\hyperlink{group___r_c_c_ex___prediv1___factor_gaab87e46cf9de9a7bd69b5844e3fb6e8d}{R\+C\+C\+\_\+\+H\+S\+E\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+D\+I\+V1}})  $\vert$$\vert$ ((\+\_\+\+\_\+\+D\+I\+V\+\_\+\+\_\+) == \mbox{\hyperlink{group___r_c_c_ex___prediv1___factor_gaac01eab0da229849f4619a7d69dda65e}{R\+C\+C\+\_\+\+H\+S\+E\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+D\+I\+V2}}))
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___private___macros_gaaa87e62aba8556651b5d09e2f7ec4db5}{I\+S\+\_\+\+R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+UL}}(\+\_\+\+\_\+\+M\+U\+L\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___private___macros_ga17690472f266a032db5324907a0ddc31}{I\+S\+\_\+\+R\+C\+C\+\_\+\+M\+C\+O1\+S\+O\+U\+R\+CE}}(\+\_\+\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___private___macros_ga755487c23148a5a52184ff6dc796c1d1}{I\+S\+\_\+\+R\+C\+C\+\_\+\+A\+D\+C\+P\+L\+L\+C\+L\+K\+\_\+\+D\+IV}}(\+\_\+\+\_\+\+A\+D\+C\+C\+L\+K\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___private___macros_ga7ef5298a4d0e7b186c4a4e5471987084}{I\+S\+\_\+\+R\+C\+C\+\_\+\+P\+E\+R\+I\+P\+H\+C\+L\+O\+CK}}(\+\_\+\+\_\+\+S\+E\+L\+E\+C\+T\+I\+O\+N\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___periph___clock___selection_gaede03aaafb5319bb39767bf50182406f}{R\+C\+C\+\_\+\+P\+E\+R\+I\+P\+H\+C\+L\+K\+\_\+\+R\+TC}}~0x00000001U
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___periph___clock___selection_gaa234e496ace2f188b106dc15a95ed6bc}{R\+C\+C\+\_\+\+P\+E\+R\+I\+P\+H\+C\+L\+K\+\_\+\+A\+DC}}~0x00000002U
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___a_d_c___prescaler_gabf0c62e72916675e7a7fb4d1ff6daa17}{R\+C\+C\+\_\+\+A\+D\+C\+P\+C\+L\+K2\+\_\+\+D\+I\+V2}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga9514a85f55de77d1c7d7be1f2f1f9665}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+A\+D\+C\+P\+R\+E\+\_\+\+D\+I\+V2}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___a_d_c___prescaler_ga8faad39ce8c436a2db1b0c26e27ee5c3}{R\+C\+C\+\_\+\+A\+D\+C\+P\+C\+L\+K2\+\_\+\+D\+I\+V4}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga748ba0a0bbb1ad1fe7e4e00f40695402}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+A\+D\+C\+P\+R\+E\+\_\+\+D\+I\+V4}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___a_d_c___prescaler_gac487ed2d7f4c9d67b72c847ae2a2e292}{R\+C\+C\+\_\+\+A\+D\+C\+P\+C\+L\+K2\+\_\+\+D\+I\+V6}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga8337d95f8480d74072e817540a333b6c}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+A\+D\+C\+P\+R\+E\+\_\+\+D\+I\+V6}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___a_d_c___prescaler_gaabcb60850e93dcba0a166361166eecaf}{R\+C\+C\+\_\+\+A\+D\+C\+P\+C\+L\+K2\+\_\+\+D\+I\+V8}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga7898d2e86664877dc43fbc2421a16347}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+A\+D\+C\+P\+R\+E\+\_\+\+D\+I\+V8}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___prediv1___factor_gaab87e46cf9de9a7bd69b5844e3fb6e8d}{R\+C\+C\+\_\+\+H\+S\+E\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+D\+I\+V1}}~0x00000000U
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___prediv1___factor_gaac01eab0da229849f4619a7d69dda65e}{R\+C\+C\+\_\+\+H\+S\+E\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+D\+I\+V2}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga39cb6bd06fb93eed1e2fe9da0297810a}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+X\+T\+P\+RE}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___p_l_l___multiplication___factor_ga1ebc7b8473983247312ff095c242285f}{R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+U\+L2}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa19a3c7d27836012150a86fd9c950cdf}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+M\+U\+L\+L2}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___p_l_l___multiplication___factor_ga4ee529382af73885706795fd81538781}{R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+U\+L3}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaeb4c410e818f5a68d58a723e7355e6e8}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+M\+U\+L\+L3}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___p_l_l___multiplication___factor_ga2aedc8bc6552d98fb748b58a2379820b}{R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+U\+L4}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga6066f758a13c7686d1dc709ac0a7d976}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+M\+U\+L\+L4}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___p_l_l___multiplication___factor_ga3b2b6019d1b1de880b009ff2a6769f03}{R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+U\+L5}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaf2290e27c9c1b64d2dd076652db40a68}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+M\+U\+L\+L5}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___p_l_l___multiplication___factor_gae2f8dd748556470dcac6901ac7a3e650}{R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+U\+L6}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5ea3b717fd226bc6ff5a78b711c051eb}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+M\+U\+L\+L6}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___p_l_l___multiplication___factor_gae215b8ba691fe0ea413c45d56e77eca0}{R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+U\+L7}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga6ff8d8dcf3876d1c85657680a64c1696}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+M\+U\+L\+L7}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___p_l_l___multiplication___factor_gaddfa6ebdecba8c5951a774b271fa82eb}{R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+U\+L8}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga95d6580b1595ff2d5c3383218370cfca}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+M\+U\+L\+L8}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___p_l_l___multiplication___factor_ga653f185ecd0b9b440180433fb1a6ff3d}{R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+U\+L9}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga384c396ec051b958c9a5781c13faf7e5}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+M\+U\+L\+L9}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___p_l_l___multiplication___factor_ga07cdf351bcf4ffc95cd45a28008e43e5}{R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+U\+L10}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gae07bb87d09d30874a5eebb32510f647f}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+M\+U\+L\+L10}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___p_l_l___multiplication___factor_ga33153db08feae4d86a5c170e8a1781bd}{R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+U\+L11}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gad338c178459b97d617398dca92b2a699}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+M\+U\+L\+L11}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___p_l_l___multiplication___factor_gaca5a5ddd829f682dd9a211e6a9be452a}{R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+U\+L12}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga79000f4e48edc56ee6ff315b64dcbfa5}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+M\+U\+L\+L12}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___p_l_l___multiplication___factor_ga9b8d76a17aeb979992e61ec3a1e32a14}{R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+U\+L13}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga647a6f3d6de31737ca95de9db3925274}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+M\+U\+L\+L13}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___p_l_l___multiplication___factor_ga6a96dc75a1fb43fb7f032a4cf34db287}{R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+U\+L14}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga9ffe33153aa4ffd2fe43439a6d2eaf5c}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+M\+U\+L\+L14}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___p_l_l___multiplication___factor_gaa75ceb816d75a0d384b67d1bf489bb44}{R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+U\+L15}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa9afaf1b82cb9c1e9c8b34c5b77b3f17}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+M\+U\+L\+L15}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___p_l_l___multiplication___factor_ga39bd735dbbdf7f4bbc122b833d2c92f3}{R\+C\+C\+\_\+\+P\+L\+L\+\_\+\+M\+U\+L16}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaecd78b92c36f3a3aafc6cc8fbf90a7e7}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+M\+U\+L\+L16}}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___m_c_o1___clock___source_ga725a16362f3324ef5866dc5a1ff07cf5}{R\+C\+C\+\_\+\+M\+C\+O1\+S\+O\+U\+R\+C\+E\+\_\+\+N\+O\+C\+L\+O\+CK}}~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_gab345908eef02b3029dd78be58baa0c8d}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+M\+C\+O\+\_\+\+N\+O\+C\+L\+O\+CK}})
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___m_c_o1___clock___source_gae8ca2959a1252ecd319843da02c79526}{R\+C\+C\+\_\+\+M\+C\+O1\+S\+O\+U\+R\+C\+E\+\_\+\+S\+Y\+S\+C\+LK}}~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaecf3b078108fdaf7e66d15ae71ec4181}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+M\+C\+O\+\_\+\+S\+Y\+S\+C\+LK}})
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___m_c_o1___clock___source_gad99c388c455852143220397db3730635}{R\+C\+C\+\_\+\+M\+C\+O1\+S\+O\+U\+R\+C\+E\+\_\+\+H\+SI}}~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga91f0ac507b8c4e5d443c107d934cfdb1}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+M\+C\+O\+\_\+\+H\+SI}})
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___m_c_o1___clock___source_ga5582d2ab152eb440a6cc3ae4833b043f}{R\+C\+C\+\_\+\+M\+C\+O1\+S\+O\+U\+R\+C\+E\+\_\+\+H\+SE}}~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga183179f1b1763f38ae88f2d8d90acd70}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+M\+C\+O\+\_\+\+H\+SE}})
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___m_c_o1___clock___source_ga79d888f2238eaa4e4b8d02b3900ea18b}{R\+C\+C\+\_\+\+M\+C\+O1\+S\+O\+U\+R\+C\+E\+\_\+\+P\+L\+L\+C\+LK}}~((uint32\+\_\+t)\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaf501b78192ef13a7016e1f2089c9f8a3}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+M\+C\+O\+\_\+\+P\+L\+L\+C\+L\+K\+\_\+\+D\+I\+V2}})
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___h_s_e___configuration_gafc6bfe4fd172ea49871172fa137b60e0}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+H\+S\+E\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+C\+O\+N\+F\+IG}}(\+\_\+\+\_\+\+H\+S\+E\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)~\mbox{\hyperlink{group___exported__macros_ga6553c99f510c3bab8cc0a91602053247}{M\+O\+D\+I\+F\+Y\+\_\+\+R\+EG}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{R\+CC}}-\/$>$C\+F\+GR,\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga39cb6bd06fb93eed1e2fe9da0297810a}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+X\+T\+P\+RE}}, (uint32\+\_\+t)(\+\_\+\+\_\+\+H\+S\+E\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the External High Speed oscillator (H\+SE) Predivision factor for P\+LL. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___h_s_e___configuration_ga33799456f6dcbcdb9e66374277083d4c}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+H\+S\+E\+\_\+\+G\+E\+T\+\_\+\+P\+R\+E\+D\+IV}}()~\mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{R\+E\+A\+D\+\_\+\+B\+IT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{R\+CC}}-\/$>$C\+F\+GR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga39cb6bd06fb93eed1e2fe9da0297810a}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+P\+L\+L\+X\+T\+P\+RE}})
+\begin{DoxyCompactList}\small\item\em Macro to get prediv1 factor for P\+LL. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___peripheral___configuration_ga4c75b81d1b7d65cda934c9f1350ea97b}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+A\+D\+C\+\_\+\+C\+O\+N\+F\+IG}}(\+\_\+\+\_\+\+A\+D\+C\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+\+\_\+)~\mbox{\hyperlink{group___exported__macros_ga6553c99f510c3bab8cc0a91602053247}{M\+O\+D\+I\+F\+Y\+\_\+\+R\+EG}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{R\+CC}}-\/$>$C\+F\+GR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga970436533d6ba9f1cb8ac840476093fb}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+A\+D\+C\+P\+RE}}, (uint32\+\_\+t)(\+\_\+\+\_\+\+A\+D\+C\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the A\+D\+Cx clock (x=1 to 3 depending on devices). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___peripheral___configuration_ga2ee9f1838a8450f949b548a06ed3bc58}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+G\+E\+T\+\_\+\+A\+D\+C\+\_\+\+S\+O\+U\+R\+CE}}()~((uint32\+\_\+t)(\mbox{\hyperlink{group___exported__macros_ga822bb1bb9710d5f2fa6396b84e583c33}{R\+E\+A\+D\+\_\+\+B\+IT}}(\mbox{\hyperlink{group___peripheral__declaration_ga74944438a086975793d26ae48d5882d4}{R\+CC}}-\/$>$C\+F\+GR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga970436533d6ba9f1cb8ac840476093fb}{R\+C\+C\+\_\+\+C\+F\+G\+R\+\_\+\+A\+D\+C\+P\+RE}})))
+\begin{DoxyCompactList}\small\item\em Macro to get the A\+DC clock (A\+D\+Cx\+C\+LK, x=1 to 3 depending on devices). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group___r_c_c_ex___exported___functions___group1_ga0c0f61a1e2f47cc81bc43d83ba3e0d95}{H\+A\+L\+\_\+\+R\+C\+C\+Ex\+\_\+\+Periph\+C\+L\+K\+Config}} (\mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def}{R\+C\+C\+\_\+\+Periph\+C\+L\+K\+Init\+Type\+Def}} $\ast$Periph\+Clk\+Init)
+\item 
+void \mbox{\hyperlink{group___r_c_c_ex___exported___functions___group1_ga754fc5136c63ad52b7c459aafc8a3927}{H\+A\+L\+\_\+\+R\+C\+C\+Ex\+\_\+\+Get\+Periph\+C\+L\+K\+Config}} (\mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def}{R\+C\+C\+\_\+\+Periph\+C\+L\+K\+Init\+Type\+Def}} $\ast$Periph\+Clk\+Init)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___r_c_c_ex___exported___functions___group1_ga14acaeb88163a6bb0839470b753ba1bd}{H\+A\+L\+\_\+\+R\+C\+C\+Ex\+\_\+\+Get\+Periph\+C\+L\+K\+Freq}} (uint32\+\_\+t Periph\+Clk)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of R\+CC H\+AL Extension module. 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2016 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 

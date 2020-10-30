@@ -1,0 +1,118 @@
+\hypertarget{stm32f1xx__hal_8h}{}\doxysection{Drivers/\+S\+T\+M32\+F1xx\+\_\+\+H\+A\+L\+\_\+\+Driver/\+Inc/stm32f1xx\+\_\+hal.h File Reference}
+\label{stm32f1xx__hal_8h}\index{Drivers/STM32F1xx\_HAL\_Driver/Inc/stm32f1xx\_hal.h@{Drivers/STM32F1xx\_HAL\_Driver/Inc/stm32f1xx\_hal.h}}
+
+
+This file contains all the functions prototypes for the H\+AL module driver.  
+
+
+{\ttfamily \#include \char`\"{}stm32f1xx\+\_\+hal\+\_\+conf.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___d_b_g_m_c_u___freeze___unfreeze_ga4a466905a367266e7c23417248dc741d}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+F\+R\+E\+E\+Z\+E\+\_\+\+T\+I\+M2}}()~\mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{S\+E\+T\+\_\+\+B\+IT}}(\mbox{\hyperlink{group___peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{D\+B\+G\+M\+CU}}-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaaa1ee73c14e640c4e97041a9ce3e221a}{D\+B\+G\+M\+C\+U\+\_\+\+C\+R\+\_\+\+D\+B\+G\+\_\+\+T\+I\+M2\+\_\+\+S\+T\+OP}})
+\begin{DoxyCompactList}\small\item\em T\+I\+M2 Peripherals Debug mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_b_g_m_c_u___freeze___unfreeze_gafd40134436233985a840e1cd8eb6c4c3}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+U\+N\+F\+R\+E\+E\+Z\+E\+\_\+\+T\+I\+M2}}()~\mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{C\+L\+E\+A\+R\+\_\+\+B\+IT}}(\mbox{\hyperlink{group___peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{D\+B\+G\+M\+CU}}-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaaa1ee73c14e640c4e97041a9ce3e221a}{D\+B\+G\+M\+C\+U\+\_\+\+C\+R\+\_\+\+D\+B\+G\+\_\+\+T\+I\+M2\+\_\+\+S\+T\+OP}})
+\item 
+\#define \mbox{\hyperlink{group___d_b_g_m_c_u___freeze___unfreeze_gaf2fe2b6d0a5e8df4ebb38020acf210d9}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+F\+R\+E\+E\+Z\+E\+\_\+\+T\+I\+M3}}()~\mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{S\+E\+T\+\_\+\+B\+IT}}(\mbox{\hyperlink{group___peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{D\+B\+G\+M\+CU}}-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gac6801756368b597301f4098b69bce4e7}{D\+B\+G\+M\+C\+U\+\_\+\+C\+R\+\_\+\+D\+B\+G\+\_\+\+T\+I\+M3\+\_\+\+S\+T\+OP}})
+\begin{DoxyCompactList}\small\item\em T\+I\+M3 Peripherals Debug mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_b_g_m_c_u___freeze___unfreeze_ga5aecefa008a37ef7c6489a2e29415e69}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+U\+N\+F\+R\+E\+E\+Z\+E\+\_\+\+T\+I\+M3}}()~\mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{C\+L\+E\+A\+R\+\_\+\+B\+IT}}(\mbox{\hyperlink{group___peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{D\+B\+G\+M\+CU}}-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gac6801756368b597301f4098b69bce4e7}{D\+B\+G\+M\+C\+U\+\_\+\+C\+R\+\_\+\+D\+B\+G\+\_\+\+T\+I\+M3\+\_\+\+S\+T\+OP}})
+\item 
+\#define \mbox{\hyperlink{group___d_b_g_m_c_u___freeze___unfreeze_ga81215154725c479c67fb1adac906fbd9}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+F\+R\+E\+E\+Z\+E\+\_\+\+W\+W\+DG}}()~\mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{S\+E\+T\+\_\+\+B\+IT}}(\mbox{\hyperlink{group___peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{D\+B\+G\+M\+CU}}-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga626bea771c7fdb87e515685104d3a562}{D\+B\+G\+M\+C\+U\+\_\+\+C\+R\+\_\+\+D\+B\+G\+\_\+\+W\+W\+D\+G\+\_\+\+S\+T\+OP}})
+\begin{DoxyCompactList}\small\item\em W\+W\+DG Peripherals Debug mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_b_g_m_c_u___freeze___unfreeze_gaa14c8a2e8911976b8c8ce6ca278372a2}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+U\+N\+F\+R\+E\+E\+Z\+E\+\_\+\+W\+W\+DG}}()~\mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{C\+L\+E\+A\+R\+\_\+\+B\+IT}}(\mbox{\hyperlink{group___peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{D\+B\+G\+M\+CU}}-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga626bea771c7fdb87e515685104d3a562}{D\+B\+G\+M\+C\+U\+\_\+\+C\+R\+\_\+\+D\+B\+G\+\_\+\+W\+W\+D\+G\+\_\+\+S\+T\+OP}})
+\item 
+\#define \mbox{\hyperlink{group___d_b_g_m_c_u___freeze___unfreeze_gabab7ab631ba58fb6246a9385e8af9d0d}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+F\+R\+E\+E\+Z\+E\+\_\+\+I\+W\+DG}}()~\mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{S\+E\+T\+\_\+\+B\+IT}}(\mbox{\hyperlink{group___peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{D\+B\+G\+M\+CU}}-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga06e02885e11d05135dd967b33fad68f1}{D\+B\+G\+M\+C\+U\+\_\+\+C\+R\+\_\+\+D\+B\+G\+\_\+\+I\+W\+D\+G\+\_\+\+S\+T\+OP}})
+\begin{DoxyCompactList}\small\item\em I\+W\+DG Peripherals Debug mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_b_g_m_c_u___freeze___unfreeze_gab29a88ef9c31cbe107c58b9ecc3bdf79}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+U\+N\+F\+R\+E\+E\+Z\+E\+\_\+\+I\+W\+DG}}()~\mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{C\+L\+E\+A\+R\+\_\+\+B\+IT}}(\mbox{\hyperlink{group___peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{D\+B\+G\+M\+CU}}-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga06e02885e11d05135dd967b33fad68f1}{D\+B\+G\+M\+C\+U\+\_\+\+C\+R\+\_\+\+D\+B\+G\+\_\+\+I\+W\+D\+G\+\_\+\+S\+T\+OP}})
+\item 
+\#define \mbox{\hyperlink{group___d_b_g_m_c_u___freeze___unfreeze_ga6160f642dcff812be3a04c5b5c66e31d}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+F\+R\+E\+E\+Z\+E\+\_\+\+I2\+C1\+\_\+\+T\+I\+M\+E\+O\+UT}}()~\mbox{\hyperlink{group___exported__macros_ga26474f43799fbade9cf300e21dd3a91a}{S\+E\+T\+\_\+\+B\+IT}}(\mbox{\hyperlink{group___peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{D\+B\+G\+M\+CU}}-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga74c71dedb4221750d7e3d8237c8b7846}{D\+B\+G\+M\+C\+U\+\_\+\+C\+R\+\_\+\+D\+B\+G\+\_\+\+I2\+C1\+\_\+\+S\+M\+B\+U\+S\+\_\+\+T\+I\+M\+E\+O\+UT}})
+\begin{DoxyCompactList}\small\item\em I2\+C1 Peripherals Debug mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_b_g_m_c_u___freeze___unfreeze_ga636083d6b6931b1cf35e7c39aebf0723}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+U\+N\+F\+R\+E\+E\+Z\+E\+\_\+\+I2\+C1\+\_\+\+T\+I\+M\+E\+O\+UT}}()~\mbox{\hyperlink{group___exported__macros_ga133aae6fc0d41bffab39ab223a7001de}{C\+L\+E\+A\+R\+\_\+\+B\+IT}}(\mbox{\hyperlink{group___peripheral__declaration_ga92ec6d9ec2251fda7d4ce09748cd74b4}{D\+B\+G\+M\+CU}}-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga74c71dedb4221750d7e3d8237c8b7846}{D\+B\+G\+M\+C\+U\+\_\+\+C\+R\+\_\+\+D\+B\+G\+\_\+\+I2\+C1\+\_\+\+S\+M\+B\+U\+S\+\_\+\+T\+I\+M\+E\+O\+UT}})
+\item 
+\#define \mbox{\hyperlink{group___h_a_l___private___macros_ga2a86bf8a89ad75716cd92e932a8ae71e}{I\+S\+\_\+\+T\+I\+C\+K\+F\+R\+EQ}}(F\+R\+EQ)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___h_a_l___t_i_c_k___f_r_e_q_gab36ec81674817249c46734772ff3b73a}{H\+A\+L\+\_\+\+Tick\+Freq\+Type\+Def}} \{ \mbox{\hyperlink{group___h_a_l___t_i_c_k___f_r_e_q_ggab36ec81674817249c46734772ff3b73aabf4d022d85adb437a57c1f45d6345092}{H\+A\+L\+\_\+\+T\+I\+C\+K\+\_\+\+F\+R\+E\+Q\+\_\+10\+HZ}} = 100U, 
+\mbox{\hyperlink{group___h_a_l___t_i_c_k___f_r_e_q_ggab36ec81674817249c46734772ff3b73aacb1ef3a0e9632aafe0fd162e2cd88408}{H\+A\+L\+\_\+\+T\+I\+C\+K\+\_\+\+F\+R\+E\+Q\+\_\+100\+HZ}} = 10U, 
+\mbox{\hyperlink{group___h_a_l___t_i_c_k___f_r_e_q_ggab36ec81674817249c46734772ff3b73aabef41c8ee13ca1d48eb49dac912f9689}{H\+A\+L\+\_\+\+T\+I\+C\+K\+\_\+\+F\+R\+E\+Q\+\_\+1\+K\+HZ}} = 1U, 
+\mbox{\hyperlink{group___h_a_l___t_i_c_k___f_r_e_q_ggab36ec81674817249c46734772ff3b73aa94e043d780eb1c36291338f6d6314e42}{H\+A\+L\+\_\+\+T\+I\+C\+K\+\_\+\+F\+R\+E\+Q\+\_\+\+D\+E\+F\+A\+U\+LT}} = H\+A\+L\+\_\+\+T\+I\+C\+K\+\_\+\+F\+R\+E\+Q\+\_\+1\+K\+HZ
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group___h_a_l___exported___functions___group1_gaecac54d350c3730e6831eb404e557dc4}{H\+A\+L\+\_\+\+Init}} (void)
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group___h_a_l___exported___functions___group1_ga95911129a26afb05232caaaefa31956f}{H\+A\+L\+\_\+\+De\+Init}} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group1_gae4fb8e66865c87d0ebab74a726a6891f}{H\+A\+L\+\_\+\+Msp\+Init}} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group1_gadd10d026ef02d00e32e80c9eab9db830}{H\+A\+L\+\_\+\+Msp\+De\+Init}} (void)
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group___h_a_l___exported___functions___group1_ga879cdb21ef051eb81ec51c18147397d5}{H\+A\+L\+\_\+\+Init\+Tick}} (uint32\+\_\+t Tick\+Priority)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaa8361d44d76b7f6256834f828165837a}{H\+A\+L\+\_\+\+Inc\+Tick}} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gae63b34eea12780ca2e1100c2402da18e}{H\+A\+L\+\_\+\+Delay}} (uint32\+\_\+t Delay)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaf2c4f03d53e997a54e1fd5e80daa55c4}{H\+A\+L\+\_\+\+Get\+Tick}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gacdcc8b5d33b9f97fe1b0abd6a86a3d4b}{H\+A\+L\+\_\+\+Get\+Tick\+Prio}} (void)
+\item 
+\mbox{\hyperlink{stm32f1xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga47f2dd240b2aed823a76b11496f37690}{H\+A\+L\+\_\+\+Set\+Tick\+Freq}} (\mbox{\hyperlink{group___h_a_l___t_i_c_k___f_r_e_q_gab36ec81674817249c46734772ff3b73a}{H\+A\+L\+\_\+\+Tick\+Freq\+Type\+Def}} Freq)
+\item 
+\mbox{\hyperlink{group___h_a_l___t_i_c_k___f_r_e_q_gab36ec81674817249c46734772ff3b73a}{H\+A\+L\+\_\+\+Tick\+Freq\+Type\+Def}} \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga803cdbcc0883bcf5f5c98c50024c97e6}{H\+A\+L\+\_\+\+Get\+Tick\+Freq}} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaaf651af2afe688a991c657f64f8fa5f9}{H\+A\+L\+\_\+\+Suspend\+Tick}} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga24e0ee9dae1ec0f9d19200f5575ff790}{H\+A\+L\+\_\+\+Resume\+Tick}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gafb139b375512ad2a234e4619b129b966}{H\+A\+L\+\_\+\+Get\+Hal\+Version}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gae051ef9e932404b21f5877c7186406b8}{H\+A\+L\+\_\+\+Get\+R\+E\+V\+ID}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaff785f069ed650de77ff82ac407f7c84}{H\+A\+L\+\_\+\+Get\+D\+E\+V\+ID}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaf982aa0a575eef3758c0840a24077506}{H\+A\+L\+\_\+\+Get\+U\+I\+Dw0}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga52720dd92ed2bd4314a2a129855d766c}{H\+A\+L\+\_\+\+Get\+U\+I\+Dw1}} (void)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga5785ae5ec8d4c5a7dadb1359f0778700}{H\+A\+L\+\_\+\+Get\+U\+I\+Dw2}} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaf031bcc71ebad9b7edf405547efd762b}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Enable\+D\+B\+G\+Sleep\+Mode}} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gac7820d0561f19999a68d714655b901b5}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Disable\+D\+B\+G\+Sleep\+Mode}} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gadf25043b17de4bef38a95a75fd03e5c4}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Enable\+D\+B\+G\+Stop\+Mode}} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga2c93dcee35e5983d74f1000de7c042d5}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Disable\+D\+B\+G\+Stop\+Mode}} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga28a1323b2eeb0a408c1cfdbfa0db5ead}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Enable\+D\+B\+G\+Standby\+Mode}} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga7faa58d8508ea3123b9f247a70379779}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Disable\+D\+B\+G\+Standby\+Mode}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{core__sc300_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___constants_ga9d411ea525781e633bf7ea7ef2f90728}{uw\+Tick}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___h_a_l___exported___constants_ga3000c5e83924ed2debb1849c738d4be2}{uw\+Tick\+Prio}}
+\item 
+\mbox{\hyperlink{group___h_a_l___t_i_c_k___f_r_e_q_gab36ec81674817249c46734772ff3b73a}{H\+A\+L\+\_\+\+Tick\+Freq\+Type\+Def}} \mbox{\hyperlink{group___h_a_l___exported___constants_ga84a0c55c4d0bff06a085b4fcfd6531cd}{uw\+Tick\+Freq}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the H\+AL module driver. 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2017 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 

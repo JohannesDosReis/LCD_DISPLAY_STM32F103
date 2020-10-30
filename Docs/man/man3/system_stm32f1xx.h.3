@@ -1,0 +1,36 @@
+.TH "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h" 3 "Thu Oct 29 2020" "lcd_display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBSystemInit\fP (void)"
+.br
+.RI "Setup the microcontroller system Initialize the Embedded Flash Interface, the PLL and update the SystemCoreClock variable\&. "
+.ti -1c
+.RI "void \fBSystemCoreClockUpdate\fP (void)"
+.br
+.RI "Update SystemCoreClock variable according to Clock Register Values\&. The SystemCoreClock variable contains the core clock (HCLK), it can be used by the user application to setup the SysTick timer or configure other parameters\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBSystemCoreClock\fP"
+.br
+.ti -1c
+.RI "const uint8_t \fBAHBPrescTable\fP [16U]"
+.br
+.ti -1c
+.RI "const uint8_t \fBAPBPrescTable\fP [8U]"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for lcd_display from the source code\&.

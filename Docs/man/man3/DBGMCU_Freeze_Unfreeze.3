@@ -1,0 +1,88 @@
+.TH "DBGMCU_Freeze_Unfreeze" 3 "Thu Oct 29 2020" "lcd_display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DBGMCU_Freeze_Unfreeze \- Freeze/Unfreeze Peripherals in Debug mode Note: On devices STM32F10xx8 and STM32F10xxB, STM32F101xC/D/E and STM32F103xC/D/E, STM32F101xF/G and STM32F103xF/G STM32F10xx4 and STM32F10xx6 Debug registers DBGMCU_IDCODE and DBGMCU_CR are accessible only in debug mode (not accessible by the user software in normal mode)\&. Refer to errata sheet of these devices for more details\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_FREEZE_TIM2\fP()   \fBSET_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_TIM2_STOP\fP)"
+.br
+.RI "TIM2 Peripherals Debug mode\&. "
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_UNFREEZE_TIM2\fP()   \fBCLEAR_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_TIM2_STOP\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_FREEZE_TIM3\fP()   \fBSET_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_TIM3_STOP\fP)"
+.br
+.RI "TIM3 Peripherals Debug mode\&. "
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_UNFREEZE_TIM3\fP()   \fBCLEAR_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_TIM3_STOP\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_FREEZE_WWDG\fP()   \fBSET_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_WWDG_STOP\fP)"
+.br
+.RI "WWDG Peripherals Debug mode\&. "
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_UNFREEZE_WWDG\fP()   \fBCLEAR_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_WWDG_STOP\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_FREEZE_IWDG\fP()   \fBSET_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_IWDG_STOP\fP)"
+.br
+.RI "IWDG Peripherals Debug mode\&. "
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_UNFREEZE_IWDG\fP()   \fBCLEAR_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_IWDG_STOP\fP)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_FREEZE_I2C1_TIMEOUT\fP()   \fBSET_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_I2C1_SMBUS_TIMEOUT\fP)"
+.br
+.RI "I2C1 Peripherals Debug mode\&. "
+.ti -1c
+.RI "#define \fB__HAL_DBGMCU_UNFREEZE_I2C1_TIMEOUT\fP()   \fBCLEAR_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_I2C1_SMBUS_TIMEOUT\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Freeze/Unfreeze Peripherals in Debug mode Note: On devices STM32F10xx8 and STM32F10xxB, STM32F101xC/D/E and STM32F103xC/D/E, STM32F101xF/G and STM32F103xF/G STM32F10xx4 and STM32F10xx6 Debug registers DBGMCU_IDCODE and DBGMCU_CR are accessible only in debug mode (not accessible by the user software in normal mode)\&. Refer to errata sheet of these devices for more details\&. 
+
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __HAL_DBGMCU_FREEZE_I2C1_TIMEOUT()   \fBSET_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_I2C1_SMBUS_TIMEOUT\fP)"
+
+.PP
+I2C1 Peripherals Debug mode\&. 
+.SS "#define __HAL_DBGMCU_FREEZE_IWDG()   \fBSET_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_IWDG_STOP\fP)"
+
+.PP
+IWDG Peripherals Debug mode\&. 
+.SS "#define __HAL_DBGMCU_FREEZE_TIM2()   \fBSET_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_TIM2_STOP\fP)"
+
+.PP
+TIM2 Peripherals Debug mode\&. 
+.SS "#define __HAL_DBGMCU_FREEZE_TIM3()   \fBSET_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_TIM3_STOP\fP)"
+
+.PP
+TIM3 Peripherals Debug mode\&. 
+.SS "#define __HAL_DBGMCU_FREEZE_WWDG()   \fBSET_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_WWDG_STOP\fP)"
+
+.PP
+WWDG Peripherals Debug mode\&. 
+.SS "#define __HAL_DBGMCU_UNFREEZE_I2C1_TIMEOUT()   \fBCLEAR_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_I2C1_SMBUS_TIMEOUT\fP)"
+
+.SS "#define __HAL_DBGMCU_UNFREEZE_IWDG()   \fBCLEAR_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_IWDG_STOP\fP)"
+
+.SS "#define __HAL_DBGMCU_UNFREEZE_TIM2()   \fBCLEAR_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_TIM2_STOP\fP)"
+
+.SS "#define __HAL_DBGMCU_UNFREEZE_TIM3()   \fBCLEAR_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_TIM3_STOP\fP)"
+
+.SS "#define __HAL_DBGMCU_UNFREEZE_WWDG()   \fBCLEAR_BIT\fP(\fBDBGMCU\fP\->CR, \fBDBGMCU_CR_DBG_WWDG_STOP\fP)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for lcd_display from the source code\&.

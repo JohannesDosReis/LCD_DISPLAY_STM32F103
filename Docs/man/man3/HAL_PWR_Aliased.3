@@ -1,0 +1,210 @@
+.TH "HAL_PWR_Aliased" 3 "Thu Oct 29 2020" "lcd_display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HAL_PWR_Aliased
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBHAL_PWR_PVDConfig\fP   \fBHAL_PWR_ConfigPVD\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_DisableBkUpReg\fP   HAL_PWREx_DisableBkUpReg"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_DisableFlashPowerDown\fP   HAL_PWREx_DisableFlashPowerDown"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_DisableVddio2Monitor\fP   HAL_PWREx_DisableVddio2Monitor"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_EnableBkUpReg\fP   HAL_PWREx_EnableBkUpReg"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_EnableFlashPowerDown\fP   HAL_PWREx_EnableFlashPowerDown"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_EnableVddio2Monitor\fP   HAL_PWREx_EnableVddio2Monitor"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_PVD_PVM_IRQHandler\fP   HAL_PWREx_PVD_PVM_IRQHandler"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_PVDLevelConfig\fP   \fBHAL_PWR_ConfigPVD\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_Vddio2Monitor_IRQHandler\fP   HAL_PWREx_Vddio2Monitor_IRQHandler"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_Vddio2MonitorCallback\fP   HAL_PWREx_Vddio2MonitorCallback"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWREx_ActivateOverDrive\fP   HAL_PWREx_EnableOverDrive"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWREx_DeactivateOverDrive\fP   HAL_PWREx_DisableOverDrive"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWREx_DisableSDADCAnalog\fP   HAL_PWREx_DisableSDADC"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWREx_EnableSDADCAnalog\fP   HAL_PWREx_EnableSDADC"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWREx_PVMConfig\fP   HAL_PWREx_ConfigPVM"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_NORMAL\fP   \fBPWR_PVD_MODE_NORMAL\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_IT_RISING\fP   \fBPWR_PVD_MODE_IT_RISING\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_IT_FALLING\fP   \fBPWR_PVD_MODE_IT_FALLING\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_IT_RISING_FALLING\fP   \fBPWR_PVD_MODE_IT_RISING_FALLING\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_EVENT_RISING\fP   \fBPWR_PVD_MODE_EVENT_RISING\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_EVENT_FALLING\fP   \fBPWR_PVD_MODE_EVENT_FALLING\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_EVENT_RISING_FALLING\fP   \fBPWR_PVD_MODE_EVENT_RISING_FALLING\fP"
+.br
+.ti -1c
+.RI "#define \fBCR_OFFSET_BB\fP   PWR_CR_OFFSET_BB"
+.br
+.ti -1c
+.RI "#define \fBCSR_OFFSET_BB\fP   PWR_CSR_OFFSET_BB"
+.br
+.ti -1c
+.RI "#define \fBPMODE_BIT_NUMBER\fP   VOS_BIT_NUMBER"
+.br
+.ti -1c
+.RI "#define \fBCR_PMODE_BB\fP   CR_VOS_BB"
+.br
+.ti -1c
+.RI "#define \fBDBP_BitNumber\fP   DBP_BIT_NUMBER"
+.br
+.ti -1c
+.RI "#define \fBPVDE_BitNumber\fP   PVDE_BIT_NUMBER"
+.br
+.ti -1c
+.RI "#define \fBPMODE_BitNumber\fP   \fBPMODE_BIT_NUMBER\fP"
+.br
+.ti -1c
+.RI "#define \fBEWUP_BitNumber\fP   EWUP_BIT_NUMBER"
+.br
+.ti -1c
+.RI "#define \fBFPDS_BitNumber\fP   FPDS_BIT_NUMBER"
+.br
+.ti -1c
+.RI "#define \fBODEN_BitNumber\fP   ODEN_BIT_NUMBER"
+.br
+.ti -1c
+.RI "#define \fBODSWEN_BitNumber\fP   ODSWEN_BIT_NUMBER"
+.br
+.ti -1c
+.RI "#define \fBMRLVDS_BitNumber\fP   MRLVDS_BIT_NUMBER"
+.br
+.ti -1c
+.RI "#define \fBLPLVDS_BitNumber\fP   LPLVDS_BIT_NUMBER"
+.br
+.ti -1c
+.RI "#define \fBBRE_BitNumber\fP   BRE_BIT_NUMBER"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_EVT\fP   \fBPWR_PVD_MODE_NORMAL\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BRE_BitNumber   BRE_BIT_NUMBER"
+
+.SS "#define CR_OFFSET_BB   PWR_CR_OFFSET_BB"
+
+.SS "#define CR_PMODE_BB   CR_VOS_BB"
+
+.SS "#define CSR_OFFSET_BB   PWR_CSR_OFFSET_BB"
+
+.SS "#define DBP_BitNumber   DBP_BIT_NUMBER"
+
+.SS "#define EWUP_BitNumber   EWUP_BIT_NUMBER"
+
+.SS "#define FPDS_BitNumber   FPDS_BIT_NUMBER"
+
+.SS "#define HAL_PWR_DisableBkUpReg   HAL_PWREx_DisableBkUpReg"
+
+.SS "#define HAL_PWR_DisableFlashPowerDown   HAL_PWREx_DisableFlashPowerDown"
+
+.SS "#define HAL_PWR_DisableVddio2Monitor   HAL_PWREx_DisableVddio2Monitor"
+
+.SS "#define HAL_PWR_EnableBkUpReg   HAL_PWREx_EnableBkUpReg"
+
+.SS "#define HAL_PWR_EnableFlashPowerDown   HAL_PWREx_EnableFlashPowerDown"
+
+.SS "#define HAL_PWR_EnableVddio2Monitor   HAL_PWREx_EnableVddio2Monitor"
+
+.SS "#define HAL_PWR_PVD_PVM_IRQHandler   HAL_PWREx_PVD_PVM_IRQHandler"
+
+.SS "#define HAL_PWR_PVDConfig   \fBHAL_PWR_ConfigPVD\fP"
+
+.SS "#define HAL_PWR_PVDLevelConfig   \fBHAL_PWR_ConfigPVD\fP"
+
+.SS "#define HAL_PWR_Vddio2Monitor_IRQHandler   HAL_PWREx_Vddio2Monitor_IRQHandler"
+
+.SS "#define HAL_PWR_Vddio2MonitorCallback   HAL_PWREx_Vddio2MonitorCallback"
+
+.SS "#define HAL_PWREx_ActivateOverDrive   HAL_PWREx_EnableOverDrive"
+
+.SS "#define HAL_PWREx_DeactivateOverDrive   HAL_PWREx_DisableOverDrive"
+
+.SS "#define HAL_PWREx_DisableSDADCAnalog   HAL_PWREx_DisableSDADC"
+
+.SS "#define HAL_PWREx_EnableSDADCAnalog   HAL_PWREx_EnableSDADC"
+
+.SS "#define HAL_PWREx_PVMConfig   HAL_PWREx_ConfigPVM"
+
+.SS "#define LPLVDS_BitNumber   LPLVDS_BIT_NUMBER"
+
+.SS "#define MRLVDS_BitNumber   MRLVDS_BIT_NUMBER"
+
+.SS "#define ODEN_BitNumber   ODEN_BIT_NUMBER"
+
+.SS "#define ODSWEN_BitNumber   ODSWEN_BIT_NUMBER"
+
+.SS "#define PMODE_BIT_NUMBER   VOS_BIT_NUMBER"
+
+.SS "#define PMODE_BitNumber   \fBPMODE_BIT_NUMBER\fP"
+
+.SS "#define PVDE_BitNumber   PVDE_BIT_NUMBER"
+
+.SS "#define PWR_MODE_EVENT_FALLING   \fBPWR_PVD_MODE_EVENT_FALLING\fP"
+
+.SS "#define PWR_MODE_EVENT_RISING   \fBPWR_PVD_MODE_EVENT_RISING\fP"
+
+.SS "#define PWR_MODE_EVENT_RISING_FALLING   \fBPWR_PVD_MODE_EVENT_RISING_FALLING\fP"
+
+.SS "#define PWR_MODE_EVT   \fBPWR_PVD_MODE_NORMAL\fP"
+
+.SS "#define PWR_MODE_IT_FALLING   \fBPWR_PVD_MODE_IT_FALLING\fP"
+
+.SS "#define PWR_MODE_IT_RISING   \fBPWR_PVD_MODE_IT_RISING\fP"
+
+.SS "#define PWR_MODE_IT_RISING_FALLING   \fBPWR_PVD_MODE_IT_RISING_FALLING\fP"
+
+.SS "#define PWR_MODE_NORMAL   \fBPWR_PVD_MODE_NORMAL\fP"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for lcd_display from the source code\&.

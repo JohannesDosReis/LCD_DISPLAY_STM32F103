@@ -1,0 +1,219 @@
+.TH "Core/Inc/lcd_display.h" 3 "Thu Oct 29 2020" "lcd_display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Core/Inc/lcd_display.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include 'stm32f1xx_hal\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLCD_RS\fP   \fBGPIO_PIN_0\fP"
+.br
+.ti -1c
+.RI "#define \fBLCD_EN\fP   \fBGPIO_PIN_1\fP"
+.br
+.ti -1c
+.RI "#define \fBLCD_PORT_DATA\fP   \fBGPIOA\fP"
+.br
+.ti -1c
+.RI "#define \fBLCD_PORT_CTRL\fP   \fBGPIOB\fP"
+.br
+.ti -1c
+.RI "#define \fBLCD_D_BIT_MASK\fP   0xF0"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBlcd_init\fP ()"
+.br
+.RI "Initialize of the LCD display Initialize in 4-bit mode, cursor off, shift cursor to right and clear the LCD screen\&. "
+.ti -1c
+.RI "void \fBlcd_clear\fP ()"
+.br
+.RI "Clear the LCD screen\&. "
+.ti -1c
+.RI "void \fBlcd_cmd\fP (char cmd)"
+.br
+.RI "Send a command to the LCD\&. "
+.ti -1c
+.RI "void \fBlcd_char\fP (char data)"
+.br
+.RI "Send data to LCD\&. "
+.ti -1c
+.RI "void \fBlcd_string\fP (const char *msg)"
+.br
+.RI "Send a string of data to the LCD\&. "
+.ti -1c
+.RI "void \fBlcd_string_pos\fP (char pos, const char *msg)"
+.br
+.RI "Send a string of data to the LCD on a specified position\&. "
+.ti -1c
+.RI "void \fBlcd_custom_char\fP (unsigned char loc, unsigned char *msg)"
+.br
+.RI "Set a custom character on the LCD\&. "
+.ti -1c
+.RI "void \fBlcd_time\fP ()"
+.br
+.RI "Tempo para dar o pulso\&. "
+.ti -1c
+.RI "void \fBlcd_default_custom_char\fP ()"
+.br
+.RI "Load the default custom characters\&. "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LCD_D_BIT_MASK   0xF0"
+
+.SS "#define LCD_EN   \fBGPIO_PIN_1\fP"
+
+.SS "#define LCD_PORT_CTRL   \fBGPIOB\fP"
+
+.SS "#define LCD_PORT_DATA   \fBGPIOA\fP"
+
+.SS "#define LCD_RS   \fBGPIO_PIN_0\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "void lcd_char (char data)"
+
+.PP
+Send data to LCD\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP The data to be sent to the LCD 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_clear ()"
+
+.PP
+Clear the LCD screen\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_cmd (char cmd)"
+
+.PP
+Send a command to the LCD\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcmd\fP The command to be sent to the LCD 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_custom_char (unsigned char loc, unsigned char * msg)"
+
+.PP
+Set a custom character on the LCD\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIloc\fP The location of the character should be set [0 - 8] 
+.br
+\fImsg\fP The character to set 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_default_custom_char ()"
+
+.PP
+Load the default custom characters\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_init ()"
+
+.PP
+Initialize of the LCD display Initialize in 4-bit mode, cursor off, shift cursor to right and clear the LCD screen\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_string (const char * msg)"
+
+.PP
+Send a string of data to the LCD\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fImsg\fP The string to be sent to the LCD 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_string_pos (char pos, const char * msg)"
+
+.PP
+Send a string of data to the LCD on a specified position\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP The position on the LCD where the string should be displayed 
+.br
+\fImsg\fP 
+.RE
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SS "void lcd_time ()"
+
+.PP
+Tempo para dar o pulso\&. 
+.PP
+\fBReturn values\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for lcd_display from the source code\&.

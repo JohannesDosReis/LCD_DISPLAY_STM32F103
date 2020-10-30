@@ -1,0 +1,39 @@
+.TH "RCC_PLLInitTypeDef" 3 "Thu Oct 29 2020" "lcd_display" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_PLLInitTypeDef \- RCC PLL configuration structure definition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f1xx_hal_rcc\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBPLLState\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBPLLSource\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBPLLMUL\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+RCC PLL configuration structure definition\&. 
+.SH "Field Documentation"
+.PP 
+.SS "uint32_t RCC_PLLInitTypeDef::PLLMUL"
+PLLMUL: Multiplication factor for PLL VCO input clock This parameter must be a value of \fBPLL Multiplication Factor\fP 
+.SS "uint32_t RCC_PLLInitTypeDef::PLLSource"
+PLLSource: PLL entry clock source\&. This parameter must be a value of \fBPLL Clock Source\fP 
+.SS "uint32_t RCC_PLLInitTypeDef::PLLState"
+PLLState: The new state of the PLL\&. This parameter can be a value of \fBPLL Config\fP 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for lcd_display from the source code\&.
