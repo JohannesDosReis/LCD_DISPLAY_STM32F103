@@ -131,7 +131,7 @@ void lcd_string(const char *msg) {
  * @brief Send a string of data to the LCD on a specified position
  *
  * @param pos The position on the LCD where the string should be displayed
- * @param msg
+ * @param msg The string to be sent to the LCD
  * @retval None
  */
 void lcd_string_pos(char pos, const char *msg) {
